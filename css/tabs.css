@@ -1,0 +1,31 @@
+.cds-tabs {
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cds-tabs__btn {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 28px;
+  padding: 0 8px;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #767676;
+  transition: .3s;
+}
+
+.cds-tabs__btn.is-active {
+  background: rgba(0, 0, 0, 0.1);
+  color: #2A2A2A;
+}
+
+.cds-tabcontent {
+  padding: 16px 20px;
+}

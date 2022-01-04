@@ -1,0 +1,147 @@
+//////////////////////////////////
+// Colors
+//////////////////////////////////
+
+// Dark
+$color-black: #4a4a4a;
+$color-black-7: rgba($color-black, .7);
+$color-black-3: rgba($color-black, .3);
+
+$color-black-active: #2a2a2a;
+
+// Light
+$color-white: #ffffff;
+$color-white-50: rgba($color-white, .5);
+$color-white-70: rgba($color-white, .7);
+$color-light-grey: #FBFBFB;
+
+// System
+$color-accent: #E09B00;
+$color-separator: rgba(#000, .1);
+$color-separator-dark: #171717;
+$color-input: rgba(#BFC7CF, .15);
+
+
+// Notifications
+$color-green: #7CC144;
+$color-yellow: #EABF5B;
+$color-red: #F18078;
+
+// Brand
+$color-OM: #E9926D;
+$color-SCM: #9163CC;
+$color-OPS: #4197CB;
+$color-PM: #009877;
+$color-FIN: #70D44B;
+$color-AM: #0071CE;
+$color-HR: #FFBF3C;
+$color-SM: #2ED9C3;
+$color-CC: #CB8BDA;
+$color-CCC: #9578D3;
+
+
+//////////////////////////////////
+// Typography
+//////////////////////////////////
+
+// Headings
+@mixin text-display-4 {
+  font-size: 80px;
+  line-height: 96px;
+  font-weight: 300;
+}
+@mixin text-display-3 {
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: 300;
+}
+@mixin text-display-2 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 300;
+}
+@mixin text-display-1 {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 400;
+}
+@mixin text-headline {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+}
+@mixin text-title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+}
+@mixin text-subheading {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+}
+@mixin text-subheading-bold {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+// Body
+@mixin text-body-2 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+@mixin text-body-2-bold {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+@mixin text-body-1 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+@mixin text-body-1-bold { 
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+@mixin text-caption {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+@mixin text-caption-bold {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+}
+@mixin text-small {
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 400;
+}
+@mixin text-small-bold {
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 700;
+}
+@mixin text-small-xs {
+  font-size: 8px;
+  line-height: 8px;
+  font-weight: 400;
+}
+@mixin text-small-xs-bold {
+  font-size: 8px;
+  line-height: 8px;
+  font-weight: 700;
+}
+
+// Other
+@mixin text-button {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}

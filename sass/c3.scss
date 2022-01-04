@@ -1,0 +1,69 @@
+.c3 {
+    max-width: 100%;
+}
+
+@import 'cds-variables';
+///////////////////////////////
+// C3.js Chart overrides
+///////////////////////////////
+
+// Axis Text Color
+.c3 .tick text {
+    fill: $color-black-7;
+  }
+  
+  // Y Horizontal Lines
+  .c3 .c3-grid line {
+    stroke: $color-separator;
+    stroke-dasharray: 0;
+  }
+  
+  // Line chart - line thickness
+  .c3 .c3-line {
+    stroke-width: 2px;
+  }
+  
+  .c3 .c3-chart-lines circle {
+    fill: $color-white;
+    stroke-width: 2px !important;
+    stroke: currentColor !important;
+  }
+  
+  
+  // Legend squares to circles
+  .c3-legend-item text {
+    fill: $color-black-7;
+  }
+  .c3-legend-item-tile {
+    shape-rendering: auto;
+    stroke-linecap: round;
+    stroke-dasharray: 0.1 10;
+    stroke-width: 10;
+    transform: translate(6px, 1px);
+  }
+  
+  // Chart Tooltip
+  .c3-tooltip-container {
+    border-radius: 4px;
+    overflow: hidden;
+    .c3-tooltip {
+      th {
+        background: $color-light-grey;
+        color: inherit;
+      }
+      td {
+        border-left: none;
+        & > span {
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  
+  //////////////////////////
+  
+  // Hide unnecessary items
+  .c3-axis .tick line,
+  .c3-axis path.domain {
+    display: none;
+  }

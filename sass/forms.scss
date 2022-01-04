@@ -1,0 +1,56 @@
+.cds-input {
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: .3s;
+    & > .icn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &:focus-within {
+        border: 1px solid #E09B00;
+    }
+}
+
+.cds-form-control {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 2px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 28px 6px 12px;
+    font-size: 12px;
+    line-height: 16px;
+    outline: none;
+    transition: .3s;
+    ::placeholder {
+        color: #2A2A2A;
+        opacity: 0.5;
+    }
+    &:hover {
+        border: 1px solid #4A4A4A;
+    }
+    &:focus {
+        border: 1px solid #E09B00;
+    }
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear,
+input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0; 
+}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none; 
+}

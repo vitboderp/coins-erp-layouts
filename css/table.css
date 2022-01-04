@@ -1,0 +1,41 @@
+.cds-table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: 12px;
+  line-height: 16px;
+  color: #2A2A2A;
+}
+
+.cds-table td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.cds-table td > * {
+  vertical-align: middle;
+}
+
+.cds-table td .cds-userpic {
+  margin-right: 4px;
+}
+
+.cds-table thead {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.cds-table thead td {
+  height: 24px;
+}
+
+.cds-table tbody td {
+  height: 40px;
+}
+
+.cds-table-wrapper {
+  margin-bottom: 28px;
+  width: 100%;
+}

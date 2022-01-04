@@ -1,0 +1,37 @@
+.cds-table {
+    width: 100%;
+    border-spacing:0;
+    border-collapse: collapse;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2A2A2A;
+    td {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 0;
+        box-sizing: border-box;
+        & > * {
+            vertical-align: middle;
+        }
+        .cds-userpic {
+            margin-right: 4px;
+        }
+    }
+    thead {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        td {
+            height: 24px;
+        }
+    }
+    tbody {
+        td {
+            height: 40px;
+        }
+    }
+}
+
+.cds-table-wrapper {
+    margin-bottom: 28px;
+    width: 100%;
+}

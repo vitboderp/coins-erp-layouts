@@ -1,0 +1,1012 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "iCoins";
+  src: url("../fonts/iCoins.eot?qbfi3d");
+  src: url("../fonts/iCoins.eot?qbfi3d#iefix") format("embedded-opentype"), url("../fonts/iCoins.ttf?qbfi3d") format("truetype"), url("../fonts/iCoins.svg?qbfi3d#iCoins") format("svg"), url("../fonts/iCoins.woff?qbfi3d") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icn {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "iCoins" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icn-Plus-Filled:before {
+  content: "";
+}
+
+.icn-Check-Filled:before {
+  content: "";
+}
+
+.icn-Check-Double-Filled:before {
+  content: "";
+}
+
+.icn-Comments-Filled:before {
+  content: "";
+}
+
+.icn-Info-Filled:before {
+  content: "";
+}
+
+.icn-Activity-Filled:before {
+  content: "";
+}
+
+.icn-Attachment-Filled:before {
+  content: "";
+}
+
+.icn-Basket-Filled:before {
+  content: "";
+}
+
+.icn-Blank-Filled:before {
+  content: "";
+}
+
+.icn-Blocks-Filled:before {
+  content: "";
+}
+
+.icn-Briefcase-Filled:before {
+  content: "";
+}
+
+.icn-Building-Filled:before {
+  content: "";
+}
+
+.icn-Calendar-Alt-Filled:before {
+  content: "";
+}
+
+.icn-Calendar-Filled:before {
+  content: "";
+}
+
+.icn-Car-Filled:before {
+  content: "";
+}
+
+.icn-Cards-Filled:before {
+  content: "";
+}
+
+.icn-Chart-Filled:before {
+  content: "";
+}
+
+.icn-Checklist-Filled:before {
+  content: "";
+}
+
+.icn-Clock-In-Filled:before {
+  content: "";
+}
+
+.icn-Clock-Out-Filled:before {
+  content: "";
+}
+
+.icn-Close-Filled:before {
+  content: "";
+}
+
+.icn-Cloud-Filled:before {
+  content: "";
+}
+
+.icn-Coins-Filled:before {
+  content: "";
+}
+
+.icn-Compare-Filled:before {
+  content: "";
+}
+
+.icn-Contract-Filled:before {
+  content: "";
+}
+
+.icn-Crane-Filled:before {
+  content: "";
+}
+
+.icn-Credit-Card-Filled:before {
+  content: "";
+}
+
+.icn-Dashboard-Filled:before {
+  content: "";
+}
+
+.icn-Delete-Filled:before {
+  content: "";
+}
+
+.icn-Delivery-Filled:before {
+  content: "";
+}
+
+.icn-Download-Filled:before {
+  content: "";
+}
+
+.icn-Drawings-Filled:before {
+  content: "";
+}
+
+.icn-Edit-Filled:before {
+  content: "";
+}
+
+.icn-Email-Filled:before {
+  content: "";
+}
+
+.icn-Energy-Filled:before {
+  content: "";
+}
+
+.icn-Excel-Filled:before {
+  content: "";
+}
+
+.icn-Eye-Filled:before {
+  content: "";
+}
+
+.icn-Filter-Filled:before {
+  content: "";
+}
+
+.icn-Filter-Sliders-Filled:before {
+  content: "";
+}
+
+.icn-Flag-Filled:before {
+  content: "";
+}
+
+.icn-Floppy-Filled:before {
+  content: "";
+}
+
+.icn-Folder-Filled:before {
+  content: "";
+}
+
+.icn-Folder-Open-Filled:before {
+  content: "";
+}
+
+.icn-Grave-Filled:before {
+  content: "";
+}
+
+.icn-Grid-Filled:before {
+  content: "";
+}
+
+.icn-Health-Filled:before {
+  content: "";
+}
+
+.icn-Helmet-Filled:before {
+  content: "";
+}
+
+.icn-History-Filled:before {
+  content: "";
+}
+
+.icn-Home-Filled:before {
+  content: "";
+}
+
+.icn-Image-Filled:before {
+  content: "";
+}
+
+.icn-Important-Alt-Filled:before {
+  content: "";
+}
+
+.icn-Important-Alt-Triangle-Filled:before {
+  content: "";
+}
+
+.icn-Important-Filled:before {
+  content: "";
+}
+
+.icn-Information-Filled:before {
+  content: "";
+}
+
+.icn-Laptop-Filled:before {
+  content: "";
+}
+
+.icn-List-Filled:before {
+  content: "";
+}
+
+.icn-Loader-Filled:before {
+  content: "";
+}
+
+.icn-Lock-Filled:before {
+  content: "";
+}
+
+.icn-LogOut-Filled:before {
+  content: "";
+}
+
+.icn-Meal-Filled:before {
+  content: "";
+}
+
+.icn-Mic-Filled:before {
+  content: "";
+}
+
+.icn-Mobile-Filled:before {
+  content: "";
+}
+
+.icn-No-Connection-Alt-Filled:before {
+  content: "";
+}
+
+.icn-No-Connection-Filled:before {
+  content: "";
+}
+
+.icn-Notes-Filled:before {
+  content: "";
+}
+
+.icn-Package-Alt-Filled:before {
+  content: "";
+}
+
+.icn-Package-Filled:before {
+  content: "";
+}
+
+.icn-PDF-Filled:before {
+  content: "";
+}
+
+.icn-Phone-Filled:before {
+  content: "";
+}
+
+.icn-Phone-Old-Filled:before {
+  content: "";
+}
+
+.icn-Photo-Filled:before {
+  content: "";
+}
+
+.icn-Pin-Filled:before {
+  content: "";
+}
+
+.icn-Pinned-Filled:before {
+  content: "";
+}
+
+.icn-Play-Filled:before {
+  content: "";
+}
+
+.icn-Priority-Filled:before {
+  content: "";
+}
+
+.icn-QR-Code-Filled:before {
+  content: "";
+}
+
+.icn-Quantity-Filled:before {
+  content: "";
+}
+
+.icn-Question-Mark-Filled:before {
+  content: "";
+}
+
+.icn-Refresh-Filled:before {
+  content: "";
+}
+
+.icn-Search-Filled:before {
+  content: "";
+}
+
+.icn-Send-Filled:before {
+  content: "";
+}
+
+.icn-Server-Issue-Filled:before {
+  content: "";
+}
+
+.icn-Settings-Filled:before {
+  content: "";
+}
+
+.icn-Shapes-Filled:before {
+  content: "";
+}
+
+.icn-Shop-Filled:before {
+  content: "";
+}
+
+.icn-Shopping-Cart-Filled:before {
+  content: "";
+}
+
+.icn-Shower-Filled:before {
+  content: "";
+}
+
+.icn-Square-Filled:before {
+  content: "";
+}
+
+.icn-Stopwatch-Filled:before {
+  content: "";
+}
+
+.icn-Tablet-Filled:before {
+  content: "";
+}
+
+.icn-Tasks-Filled:before {
+  content: "";
+}
+
+.icn-Template-Filled:before {
+  content: "";
+}
+
+.icn-Time-Filled:before {
+  content: "";
+}
+
+.icn-Travel-Home-Filled:before {
+  content: "";
+}
+
+.icn-Travel-Work-Filled:before {
+  content: "";
+}
+
+.icn-Triangle-Filled:before {
+  content: "";
+}
+
+.icn-Unlock-Filled:before {
+  content: "";
+}
+
+.icn-Wallet-Filled:before {
+  content: "";
+}
+
+.icn-Work-Filled:before {
+  content: "";
+}
+
+.icn-Worker-Add-Filled:before {
+  content: "";
+}
+
+.icn-Worker-Filled:before {
+  content: "";
+}
+
+.icn-Package-Add:before {
+  content: "";
+}
+
+.icn-Worker-Add:before {
+  content: "";
+}
+
+.icn-Airplane:before {
+  content: "";
+}
+
+.icn-Approve:before {
+  content: "";
+}
+
+.icn-Arrow-Down:before {
+  content: "";
+}
+
+.icn-Arrow-Left:before {
+  content: "";
+}
+
+.icn-Arrow-Right:before {
+  content: "";
+}
+
+.icn-Arrow-Up:before {
+  content: "";
+}
+
+.icn-Attachment:before {
+  content: "";
+}
+
+.icn-Basket:before {
+  content: "";
+}
+
+.icn-Bed:before {
+  content: "";
+}
+
+.icn-Bell:before {
+  content: "";
+}
+
+.icn-Blank:before {
+  content: "";
+}
+
+.icn-Blocks:before {
+  content: "";
+}
+
+.icn-Calendar:before {
+  content: "";
+}
+
+.icn-Calendar-Day:before {
+  content: "";
+}
+
+.icn-Calendar-Month:before {
+  content: "";
+}
+
+.icn-Calendar-Week:before {
+  content: "";
+}
+
+.icn-Calendar-Workdays:before {
+  content: "";
+}
+
+.icn-Car:before {
+  content: "";
+}
+
+.icn-Car-Alt:before {
+  content: "";
+}
+
+.icn-Cards:before {
+  content: "";
+}
+
+.icn-Caret-Down:before {
+  content: "";
+}
+
+.icn-Caret-Up:before {
+  content: "";
+}
+
+.icn-Check:before {
+  content: "";
+}
+
+.icn-Checklist:before {
+  content: "";
+}
+
+.icn-Checklist-Cogs:before {
+  content: "";
+}
+
+.icn-Checklist-Fail:before {
+  content: "";
+}
+
+.icn-Checklist-Start:before {
+  content: "";
+}
+
+.icn-Checklist-Time:before {
+  content: "";
+}
+
+.icn-Checklist-Time-Alt:before {
+  content: "";
+}
+
+.icn-Chevron-Down:before {
+  content: "";
+}
+
+.icn-Chevron-Left:before {
+  content: "";
+}
+
+.icn-Chevron-Right:before {
+  content: "";
+}
+
+.icn-Chevron-Up:before {
+  content: "";
+}
+
+.icn-Clock-In:before {
+  content: "";
+}
+
+.icn-Clock-Out:before {
+  content: "";
+}
+
+.icn-Close:before {
+  content: "";
+}
+
+.icn-Cogs:before {
+  content: "";
+}
+
+.icn-Coins:before {
+  content: "";
+}
+
+.icn-Comments:before {
+  content: "";
+}
+
+.icn-Company:before {
+  content: "";
+}
+
+.icn-Compare:before {
+  content: "";
+}
+
+.icn-Complete:before {
+  content: "";
+}
+
+.icn-Contract:before {
+  content: "";
+}
+
+.icn-Corner-Arrow:before {
+  content: "";
+}
+
+.icn-Crane:before {
+  content: "";
+}
+
+.icn-Credit-Card:before {
+  content: "";
+}
+
+.icn-Dashboard:before {
+  content: "";
+}
+
+.icn-Delete:before {
+  content: "";
+}
+
+.icn-Delivery:before {
+  content: "";
+}
+
+.icn-Divide:before {
+  content: "";
+}
+
+.icn-Double-Arrows-Down:before {
+  content: "";
+}
+
+.icn-Download:before {
+  content: "";
+}
+
+.icn-Drag-Indicator:before {
+  content: "";
+}
+
+.icn-Drawings:before {
+  content: "";
+}
+
+.icn-Edit:before {
+  content: "";
+}
+
+.icn-Email:before {
+  content: "";
+}
+
+.icn-Employee-List:before {
+  content: "";
+}
+
+.icn-Equal:before {
+  content: "";
+}
+
+.icn-Excel:before {
+  content: "";
+}
+
+.icn-Expand:before {
+  content: "";
+}
+
+.icn-External-Link:before {
+  content: "";
+}
+
+.icn-Eye:before {
+  content: "";
+}
+
+.icn-Favourites:before {
+  content: "";
+}
+
+.icn-Filter:before {
+  content: "";
+}
+
+.icn-Filter-Sliders:before {
+  content: "";
+}
+
+.icn-Floppy:before {
+  content: "";
+}
+
+.icn-Folder:before {
+  content: "";
+}
+
+.icn-Folder-Open:before {
+  content: "";
+}
+
+.icn-Food:before {
+  content: "";
+}
+
+.icn-Fuel:before {
+  content: "";
+}
+
+.icn-Grid:before {
+  content: "";
+}
+
+.icn-Helmet:before {
+  content: "";
+}
+
+.icn-History:before {
+  content: "";
+}
+
+.icn-Home:before {
+  content: "";
+}
+
+.icn-Image:before {
+  content: "";
+}
+
+.icn-Important:before {
+  content: "";
+}
+
+.icn-Important-Alt:before {
+  content: "";
+}
+
+.icn-Laptop:before {
+  content: "";
+}
+
+.icn-Linked:before {
+  content: "";
+}
+
+.icn-List:before {
+  content: "";
+}
+
+.icn-Lock:before {
+  content: "";
+}
+
+.icn-Log-Out:before {
+  content: "";
+}
+
+.icn-Map-Pin:before {
+  content: "";
+}
+
+.icn-Meal:before {
+  content: "";
+}
+
+.icn-Menu-Burger:before {
+  content: "";
+}
+
+.icn-Mic:before {
+  content: "";
+}
+
+.icn-More-Horizontal:before {
+  content: "";
+}
+
+.icn-More-Vertical:before {
+  content: "";
+}
+
+.icn-Multiply:before {
+  content: "";
+}
+
+.icn-No-Connection:before {
+  content: "";
+}
+
+.icn-Notes:before {
+  content: "";
+}
+
+.icn-Open:before {
+  content: "";
+}
+
+.icn-PDF:before {
+  content: "";
+}
+
+.icn-Package:before {
+  content: "";
+}
+
+.icn-Package-Confirmed .path1:before {
+  content: "";
+  color: #4a4a4a;
+}
+
+.icn-Package-Confirmed .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: #4a4a4a;
+}
+
+.icn-Package-Confirmed .path3:before {
+  content: "";
+  margin-left: -1em;
+  color: white;
+}
+
+.icn-Parking:before {
+  content: "";
+}
+
+.icn-Phone:before {
+  content: "";
+}
+
+.icn-Phone-Mobile:before {
+  content: "";
+}
+
+.icn-Phone-Old:before {
+  content: "";
+}
+
+.icn-Photo-Camera:before {
+  content: "";
+}
+
+.icn-Photo-Camera-Crossed:before {
+  content: "";
+}
+
+.icn-Photo-Switch:before {
+  content: "";
+}
+
+.icn-Pinned:before {
+  content: "";
+}
+
+.icn-Plus:before {
+  content: "";
+}
+
+.icn-Quantity:before {
+  content: "";
+}
+
+.icn-Refresh:before {
+  content: "";
+}
+
+.icn-Reject:before {
+  content: "";
+}
+
+.icn-Search:before {
+  content: "";
+}
+
+.icn-Search-Check:before {
+  content: "";
+}
+
+.icn-Search-Important:before {
+  content: "";
+}
+
+.icn-Sell-House:before {
+  content: "";
+}
+
+.icn-Sell-House-Pounds:before {
+  content: "";
+}
+
+.icn-Send:before {
+  content: "";
+}
+
+.icn-Server-Issue:before {
+  content: "";
+}
+
+.icn-Settings:before {
+  content: "";
+}
+
+.icn-Shapes:before {
+  content: "";
+}
+
+.icn-Share:before {
+  content: "";
+}
+
+.icn-Shop:before {
+  content: "";
+}
+
+.icn-Shopping-Cart:before {
+  content: "";
+}
+
+.icn-Shower:before {
+  content: "";
+}
+
+.icn-Site:before {
+  content: "";
+}
+
+.icn-Site-Alt:before {
+  content: "";
+}
+
+.icn-Sort-Both:before {
+  content: "";
+}
+
+.icn-Sort-Down:before {
+  content: "";
+}
+
+.icn-Sort-Up:before {
+  content: "";
+}
+
+.icn-Spinner:before {
+  content: "";
+}
+
+.icn-Stopwatch:before {
+  content: "";
+}
+
+.icn-Sunrise:before {
+  content: "";
+}
+
+.icn-Sunset:before {
+  content: "";
+}
+
+.icn-Tablet:before {
+  content: "";
+}
+
+.icn-Tasks:before {
+  content: "";
+}
+
+.icn-Template:before {
+  content: "";
+}
+
+.icn-Text:before {
+  content: "";
+}
+
+.icn-Timer:before {
+  content: "";
+}
+
+.icn-Trades:before {
+  content: "";
+}
+
+.icn-Travel-Home:before {
+  content: "";
+}
+
+.icn-Travel-Work:before {
+  content: "";
+}
+
+.icn-Undo:before {
+  content: "";
+}
+
+.icn-Unlock:before {
+  content: "";
+}
+
+.icn-Wallet:before {
+  content: "";
+}
+
+.icn-Worker:before {
+  content: "";
+}

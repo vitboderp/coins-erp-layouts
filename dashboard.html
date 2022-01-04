@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard ERP+</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="c3.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    
+</head>
+<body>
+    <section class="cds-dashboard">
+        <div class="cds-tabs">
+            <button class="cds-btn cds-tabs__btn" onclick="openTab(event, 'siteSales')" id="defaultTab">Site Sales</button>
+            <button class="cds-btn cds-tabs__btn" onclick="openTab(event, 'salesAdmin')">Sales Admin</button>
+            <button class="cds-btn cds-tabs__btn" onclick="openTab(event, 'Reports')">Reports</button>
+            <button class="cds-btn cds-tabs__btn" onclick="openTab(event, 'Company')">Company</button>
+        </div>
+        <div class="cds-tabcontent" id="siteSales">
+            <div class="cds-accordion">
+                <!-- add class .defaultOpenAccordion to open accordion -->
+                <div class="cds-accordion__head defaultOpenAccordion">
+                    <i class="icn icn-Chevron-Right"></i>
+                    <span>To Review</span>
+                </div>
+                <div class="cds-accordion__body">
+                    <div class="row cds-cards-row">
+                        <div class="col-xxl-3 col-xl-4 col-md-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#" class="col cds-tile">
+                                        <div class="cds-tile__icon">
+                                            <img src="./images/Icon-Pills.svg" alt="">
+                                        </div>
+                                        <div class="cds-tile__title">Overdue Completions</div>
+                                        <div class="cds-tile__value">4</div>
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="cds-tile">
+                                        <div class="cds-tile__icon">
+                                            <img src="./images/Icon-Pills.svg" alt="">
+                                        </div>
+                                        <div class="cds-tile__title">My Overdue Actions</div>
+                                        <div class="cds-tile__value">2</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-4 col-md-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#" class="cds-tile">
+                                        <div class="cds-tile__icon">
+                                            <img src="./images/Icon-Pills.svg" alt="">
+                                        </div>
+                                        <div class="cds-tile__title">Team Overdue Actions</div>
+                                        <div class="cds-tile__value">3</div>
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="cds-tile">
+                                        <div class="cds-tile__icon">
+                                            <img src="./images/Icon-Pills.svg" alt="">
+                                        </div>
+                                        <div class="cds-tile__title">Exchanges Overdue</div>
+                                        <div class="cds-tile__value">3</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="row cds-cards-row">
+                        <div class="col-2 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Prospects</div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">To Review</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Active no Action</div>
+                                        <div class="cds-card__value">2</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-1 cds-card__minwidth">
+                            <a href="#" class="cds-card cds-card--single">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Build Without Warranty Details</div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <div class="cds-card__info">
+                                        <div class="cds-card__value cds-card__value--inactive cds-card__value--large">0</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+        
+                        <div class="col-2 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Choises</div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Awaiting Authorisation</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Bespoke to Review</div>
+                                        <div class="cds-card__value">2</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-2 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Exchanges</div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Expected Today</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">No Warranty Details</div>
+                                        <div class="cds-card__value">2</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-2 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Reservations</div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Incomplete</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">With No Solicitor</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Older than 42 Days</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-2 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Mortgage</div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Reservations Offer Outstanding</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Offer Due to Expire (Before CML)</div>
+                                        <div class="cds-card__value">2</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-2 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Completions</div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Expected Today</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">No Occupation</div>
+                                        <div class="cds-card__value">1</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">No Meter Readings</div>
+                                        <div class="cds-card__value">3</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-2 cds-card__minwidth">
+                            <a href="#" class="cds-card cds-card--single">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Completions</div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <div class="cds-card__info">
+                                        <div class="cds-card__subtitle">Expected Today</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </div>
+                                    <div class="cds-card__info">
+                                        <div class="cds-card__subtitle">No Occupation</div>
+                                        <div class="cds-card__value">1</div>
+                                    </div>
+                                    <div class="cds-card__info">
+                                        <div class="cds-card__subtitle">No Meter Readings</div>
+                                        <div class="cds-card__value">3</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row cds-cards-row">
+                        <div class="col-3 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">My Actions today</div>
+                                    <div class="cds-card__actions">
+                                        <div class="cds-input cds-input--search">
+                                            <input class="cds-form-control" type="search" placeholder="Search for something...">
+                                            <i class="icn icn-Search"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <div class="cds-table-wrapper">
+                                        <table class="cds-table">
+                                            <thead>
+                                                <tr>
+                                                    <td>Time</td>
+                                                    <td>Subject</td>
+                                                    <td>Link</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>14:15</td>
+                                                    <td>Some subject here</td>
+                                                    <td><a class="cds-link" href="http://some-link.com">http://some-link.com</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>14:15</td>
+                                                    <td>Some subject here</td>
+                                                    <td><a class="cds-link" href="http://some-link.com">http://some-link.com</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>14:15</td>
+                                                    <td>Some subject here</td>
+                                                    <td><a class="cds-link" href="http://some-link.com">http://some-link.com</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">My Actions today</div>
+                                    <div class="cds-card__actions">
+                                        <div class="cds-input cds-input--search">
+                                            <input class="cds-form-control" type="search" placeholder="Search for something...">
+                                            <i class="icn icn-Search"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <div class="cds-table-wrapper">
+                                        <table class="cds-table">
+                                            <thead>
+                                                <tr>
+                                                    <td>User</td>
+                                                    <td>Time</td>
+                                                    <td>Subject</td>
+                                                    <td>Link</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <span class="cds-userpic">
+                                                            <img src="./images/user-avatar.jpg" alt="">
+                                                        </span>
+                                                        <span>George Steebs</span>
+                                                    </td>
+                                                    <td>14:15</td>
+                                                    <td>Some subject here</td>
+                                                    <td><a class="cds-link" href="http://some-link.com">http://some-link.com</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="cds-userpic">
+                                                            <img src="./images/user-avatar.jpg" alt="">
+                                                        </span>
+                                                        <span>Barbara Whistle</span>
+                                                    </td>
+                                                    <td>14:15</td>
+                                                    <td>Some subject here</td>
+                                                    <td><a class="cds-link" href="http://some-link.com">http://some-link.com</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="cds-userpic">
+                                                            <img src="./images/user-avatar.jpg" alt="">
+                                                        </span>
+                                                        <span>Andrew Walker</span>
+                                                    </td>
+                                                    <td>14:15</td>
+                                                    <td>Some subject here</td>
+                                                    <td><a class="cds-link" href="http://some-link.com">http://some-link.com</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cds-accordion__head defaultOpenAccordion">
+                    <i class="icn icn-Chevron-Right"></i>
+                    <span>Prospects</span>
+                </div>
+                <div class="cds-accordion__body">
+                    <div class="row cds-cards-row">
+                        <div class="col-3 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Footfall</div>
+                                    <div class="cds-card__actions">
+                                        <button class="cds-btn cds-btn--icon"><img src="images/Printer.svg" alt=""></button>
+                                        <button class="cds-btn cds-btn--icon"><img src="images/Refresh.svg" alt=""></button>
+                                        <button class="cds-btn cds-btn--icon"><img src="images/Open.svg" alt=""></button>
+                                    </div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <div id="line-chart-example" class="c3"></div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-3 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Card title</div>
+                                    <div class="cds-card__actions">
+                                        <button class="cds-btn cds-btn--icon"><img src="images/Refresh.svg" alt=""></button>
+                                        <button class="cds-btn cds-btn--icon"><img src="images/Open.svg" alt=""></button>
+                                    </div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <div id="bar-chart-example" class="c3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cds-cards-row">
+                        <div class="col-2 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Leads</div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Hot Prospects</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Warm Prospects</div>
+                                        <div class="cds-card__value">2</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-2 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Level of Interest</div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">No Interest</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Some Interest</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Very Interest</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-3 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Prospects</div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">To review</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">New This Week</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">New Last Week</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Active</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-3 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Bedroom Leads</div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">One Bedroom</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Two Bedroom</div>
+                                        <div class="cds-card__value">5</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Three Bedroom</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Four Bedroom</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Five+ Bedroom</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-1 cds-card__minwidth">
+                            <a href="#" class="cds-card cds-card--single">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Avaliable Plots to be Reserved</div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <div class="cds-card__info">
+                                        <div class="cds-card__value cds-card__value--inactive cds-card__value--large">0</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+        
+                        <div class="col-2 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Workbench</div>
+                                    <div class="cds-card__actions">
+                                        <button class="cds-btn cds-btn--icon"><img src="images/Printer.svg" alt=""></button>
+                                        <button class="cds-btn cds-btn--icon"><img src="images/Refresh.svg" alt=""></button>
+                                        <button class="cds-btn cds-btn--icon"><img src="images/Open.svg" alt=""></button>
+                                    </div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Prospects</div>
+                                        <div class="cds-card__value cds-card__value--inactive">0</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Activity</div>
+                                        <div class="cds-card__value">1</div>
+                                    </a>
+                                    <a href="#" class="cds-card__info">
+                                        <div class="cds-card__subtitle">Customer</div>
+                                        <div class="cds-card__value">3</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-1 cds-card__minwidth">
+                            <a href="#" class="cds-card cds-card--single">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Avaliable Plots to be Reserved</div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <div class="cds-card__info">
+                                        <div class="cds-card__value cds-card__value--inactive cds-card__value--large">0</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row cds-cards-row">
+                        <div class="col-2 cds-card__minwidth">
+                            <div class="cds-card cds-card--top">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Actions</div>
+                                    <div class="cds-card__actions">
+                                        <div class="cds-input cds-input--search">
+                                            <input class="cds-form-control" type="search" placeholder="Filter...">
+                                            <i class="icn icn-Search"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <div class="cds-card-tiles">
+                                        <a href="#" class="cds-card-tiles__item">
+                                            <i class="icn icn-Shapes-Filled"></i>
+                                            <span>Foot Traffic Input</span>
+                                        </a>
+                                        <a href="#" class="cds-card-tiles__item">
+                                            <i class="icn icn-Shapes-Filled"></i>
+                                            <span>Available Plots Enquiry</span>
+                                        </a>
+                                        <a href="#" class="cds-card-tiles__item">
+                                            <i class="icn icn-Settings-Filled"></i>
+                                            <span>Availability List Print</span>
+                                        </a>
+                                        <a href="#" class="cds-card-tiles__item">
+                                            <i class="icn icn-Shapes-Filled"></i>
+                                            <span>Spotler</span>
+                                        </a>
+                                        <a href="#" class="cds-card-tiles__item">
+                                            <i class="icn icn-Shapes-Filled"></i>
+                                            <span>Spotler</span>
+                                        </a>
+                                        <a href="#" class="cds-card-tiles__item">
+                                            <i class="icn icn-Shapes-Filled"></i>
+                                            <span>Spotler</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-2 cds-card__minwidth">
+                            <div class="cds-card cds-card--top">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Prospects</div>
+                                    <div class="cds-card__actions">
+                                        <div class="cds-input cds-input--search">
+                                            <input class="cds-form-control" type="search" placeholder="Filter...">
+                                            <i class="icn icn-Search"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <div class="cds-card-tiles">
+                                        <a href="#" class="cds-card-tiles__item">
+                                            <i class="icn icn-Shapes-Filled"></i>
+                                            <span>My Prospects</span>
+                                        </a>
+                                        <a href="#" class="cds-card-tiles__item">
+                                            <i class="icn icn-Plus-Filled"></i>
+                                            <span>Add Prospect</span>
+                                        </a>
+                                        <a href="#" class="cds-card-tiles__item">
+                                            <i class="icn icn-Plus-Filled"></i>
+                                            <span>Quick Add Prospect</span>
+                                        </a>
+                                        <a href="#" class="cds-card-tiles__item">
+                                            <i class="icn icn-Plus-Filled"></i>
+                                            <span>Add Event</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cds-accordion__head">
+                    <i class="icn icn-Chevron-Right"></i>
+                    <span>Prospects Kanban</span>
+                </div>
+                <div class="cds-accordion__body">
+                    Content Prospects Kanban
+                </div>
+
+                <div class="cds-accordion__head defaultOpenAccordion">
+                    <i class="icn icn-Chevron-Right"></i>
+                    <span>Sales</span>
+                </div>
+                <div class="cds-accordion__body">
+                    <div class="row cds-cards-row">
+                        <div class="col-2 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">Q4 Sales</div>
+                                    <div class="cds-card__actions">
+                                        <button class="cds-btn cds-btn--icon"><i class="icn icn-Refresh"></i></button>
+                                    </div>
+                                </div>
+                                <div class="cds-card__body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="cds-card__value">37.0%</div>
+                                                <div class="h5">$20,239,00.00</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="text-small text-dark-gray">Q4 Goal</div>
+                                                    <div class="h5">$54,700,000.00</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="text-small text-dark-gray">Remaining</div>
+                                                    <div class="h5">$20,239,00.00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2 cds-card__minwidth">
+                            <div class="cds-card">
+                                <div class="cds-card__header">
+                                    <div class="cds-card__title">My Current Year Sales Goals</div>
+                                    <div class="cds-card__actions">
+                                        <button class="cds-btn cds-btn--icon"><i class="icn icn-Refresh"></i></button>
+                                    </div>
+                                </div>
+                                <div class="cds-card__body">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cds-accordion__head">
+                    <i class="icn icn-Chevron-Right"></i>
+                    <span>Outstanding</span>
+                </div>
+                <div class="cds-accordion__body">
+                    Content Outstanding
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cds-tabcontent" id="salesAdmin">
+            Sales Admin Tab
+        </div>
+        <div class="cds-tabcontent" id="Reports">
+            Reports Tab
+        </div>
+        <div class="cds-tabcontent" id="Company">
+            Company Tab
+        </div>
+    </section>
+
+
+    <!-- charts js  -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="c3.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
