@@ -44,7 +44,7 @@ var chart = c3.generate({
       bottom: 20,
     },
     size: {
-        height: 250
+        height: 240
     }
   });
   
@@ -104,9 +104,59 @@ var chart = c3.generate({
       }
     },
     size: {
-        height: 250
+        height: 240
     }
   });
+
+
+
+        
+var chart = c3.generate({
+  bindto: '#spline-chart-example',
+  data: {
+    x: 'x',
+    columns: [
+      ['x', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      ['Forecast', 50, 80, 60, 120, 160, 100, 140, 120, 200, 120, 80, 80],
+      ['Actual', 30, 60, 40, 90, 120, 80, 100, 140, 180, 100, 60, 120],
+    ],
+    type: 'spline',
+  },
+  color: {
+    pattern: chartColors
+  },
+  axis: {
+    y: {
+      padding: {bottom: 10},
+      tick: {
+        outer: false,
+      },
+      min: 0
+    },
+    x: {
+      type: 'category',
+      tick: {
+        outer: false
+      }
+    }
+  },
+  grid: {
+    y: {
+      show: true
+    }
+  },
+  point: {
+    r: 3
+  },
+  padding: {
+    bottom: 20
+  },
+  size: {
+    height: 240
+  }
+});
+
+      
     
 
 

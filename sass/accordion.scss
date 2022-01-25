@@ -25,7 +25,7 @@
         }
         &.is-active {
             border-color: transparent;
-            background: #fff;
+            background: transparent;
             & > .icn {
                 transform: rotate(90deg);
             }
@@ -33,7 +33,7 @@
     }
 
     &__body {
-        background-color: white;
+        background-color: transparent;
         max-height: 0;
         overflow: hidden;
         transition: .3s;

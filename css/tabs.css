@@ -1,6 +1,10 @@
 .cds-tabs {
   padding: 12px 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: #fff;
 }
 
 .cds-tabs__btn {
@@ -28,4 +32,23 @@
 
 .cds-tabcontent {
   padding: 16px 20px;
+  position: relative;
+}
+
+.cds-tabcontent__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: .3;
+  z-index: 1;
+}
+
+.cds-tabcontent__bg ~ * {
+  position: relative;
+  z-index: 2;
 }

@@ -31,7 +31,7 @@
 
 .cds-accordion__head.is-active {
   border-color: transparent;
-  background: #fff;
+  background: transparent;
 }
 
 .cds-accordion__head.is-active > .icn {
@@ -39,7 +39,7 @@
 }
 
 .cds-accordion__body {
-  background-color: white;
+  background-color: transparent;
   max-height: 0;
   overflow: hidden;
   transition: .3s;

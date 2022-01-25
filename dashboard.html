@@ -26,6 +26,8 @@
             <button class="cds-btn cds-tabs__btn" onclick="openTab(event, 'Company')">Company</button>
         </div>
         <div class="cds-tabcontent" id="siteSales">
+            <div class="cds-tabcontent__bg" style="background-image: url('/images/custom-bg.png');"></div>
+            <div class="cds-tabcontent__bg" style="background: rgba(66, 73, 88, 0.1);"></div>
             <div class="cds-accordion">
                 <!-- add class .defaultOpenAccordion to open accordion -->
                 <div class="cds-accordion__head defaultOpenAccordion">
@@ -34,66 +36,59 @@
                 </div>
                 <div class="cds-accordion__body">
                     <div class="row cds-cards-row">
-                        <div class="col-xxl-3 col-xl-4 col-md-6">
-                            <div class="row">
-                                <div class="col-6">
-                                    <a href="#" class="col cds-tile">
-                                        <div class="cds-tile__icon">
-                                            <img src="./images/Icon-Pills.svg" alt="">
-                                        </div>
-                                        <div class="cds-tile__title">Overdue Completions</div>
-                                        <div class="cds-tile__value">4</div>
-                                    </a>
+                        <div class="col-2 cds-card__minwidth">
+                            <a href="#" class="cds-tile">
+                                <div class="cds-tile__icon">
+                                    <img src="./images/Icon-Pills.svg" alt="">
                                 </div>
-                                <div class="col-6">
-                                    <a href="#" class="cds-tile">
-                                        <div class="cds-tile__icon">
-                                            <img src="./images/Icon-Pills.svg" alt="">
-                                        </div>
-                                        <div class="cds-tile__title">My Overdue Actions</div>
-                                        <div class="cds-tile__value">2</div>
-                                    </a>
-                                </div>
-                            </div>
+                                <div class="cds-tile__title">Overdue Completions</div>
+                                <div class="cds-tile__value">4</div>
+                            </a>
                         </div>
-                        <div class="col-xxl-3 col-xl-4 col-md-6">
-                            <div class="row">
-                                <div class="col-6">
-                                    <a href="#" class="cds-tile">
-                                        <div class="cds-tile__icon">
-                                            <img src="./images/Icon-Pills.svg" alt="">
-                                        </div>
-                                        <div class="cds-tile__title">Team Overdue Actions</div>
-                                        <div class="cds-tile__value">3</div>
-                                    </a>
+                        <div class="col-2 cds-card__minwidth">
+                            <a href="#" class="cds-tile">
+                                <div class="cds-tile__icon">
+                                    <img src="./images/Icon-Pills.svg" alt="">
                                 </div>
-                                <div class="col-6">
-                                    <a href="#" class="cds-tile">
-                                        <div class="cds-tile__icon">
-                                            <img src="./images/Icon-Pills.svg" alt="">
-                                        </div>
-                                        <div class="cds-tile__title">Exchanges Overdue</div>
-                                        <div class="cds-tile__value">3</div>
-                                    </a>
-                                </div>
-                            </div>
+                                <div class="cds-tile__title">My Overdue Actions</div>
+                                <div class="cds-tile__value">2</div>
+                            </a>
                         </div>
-                        
-                        
+                        <div class="col-2 cds-card__minwidth">
+                            <a href="#" class="cds-tile">
+                                <div class="cds-tile__icon">
+                                    <img src="./images/Icon-Pills.svg" alt="">
+                                </div>
+                                <div class="cds-tile__title">Team Overdue Actions</div>
+                                <div class="cds-tile__value">3</div>
+                            </a>
+                        </div>
+                        <div class="col-2 cds-card__minwidth">
+                            <a href="#" class="cds-tile">
+                                <div class="cds-tile__icon">
+                                    <img src="./images/Icon-Pills.svg" alt="">
+                                </div>
+                                <div class="cds-tile__title">Exchanges Overdue</div>
+                                <div class="cds-tile__value">3</div>
+                            </a>
+                        </div>  
                     </div>
                     <div class="row cds-cards-row">
                         <div class="col-2 cds-card__minwidth">
-                            <div class="cds-card">
+                            <div class="cds-card cds-card--md">
                                 <div class="cds-card__header">
-                                    <div class="cds-card__title">Prospects</div>
+                                    <div class="cds-card__title">
+                                        <span>Prospects</span>
+                                        <div class="cds-card__subtitle">Card Subtitle</div>
+                                    </div>
                                 </div>
                                 <div class="cds-card__body">
                                     <a href="#" class="cds-card__info">
-                                        <div class="cds-card__subtitle">To Review</div>
+                                        <div class="cds-card__subtitle text-bold">To Review</div>
                                         <div class="cds-card__value cds-card__value--inactive">0</div>
                                     </a>
                                     <a href="#" class="cds-card__info">
-                                        <div class="cds-card__subtitle">Active no Action</div>
+                                        <div class="cds-card__subtitle text-bold">Active no Action</div>
                                         <div class="cds-card__value">2</div>
                                     </a>
                                 </div>
@@ -101,7 +96,7 @@
                         </div>
         
                         <div class="col-1 cds-card__minwidth">
-                            <a href="#" class="cds-card cds-card--single">
+                            <a href="#" class="cds-card cds-card--single cds-card--md">
                                 <div class="cds-card__header">
                                     <div class="cds-card__title">Build Without Warranty Details</div>
                                 </div>
@@ -114,7 +109,7 @@
                         </div>
         
                         <div class="col-2 cds-card__minwidth">
-                            <div class="cds-card">
+                            <div class="cds-card cds-card--md">
                                 <div class="cds-card__header">
                                     <div class="cds-card__title">Choises</div>
                                 </div>
@@ -132,7 +127,7 @@
                         </div>
         
                         <div class="col-2 cds-card__minwidth">
-                            <div class="cds-card">
+                            <div class="cds-card cds-card--md">
                                 <div class="cds-card__header">
                                     <div class="cds-card__title">Exchanges</div>
                                 </div>
@@ -150,7 +145,7 @@
                         </div>
         
                         <div class="col-2 cds-card__minwidth">
-                            <div class="cds-card">
+                            <div class="cds-card cds-card--md">
                                 <div class="cds-card__header">
                                     <div class="cds-card__title">Reservations</div>
                                 </div>
@@ -170,27 +165,9 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <div class="col-2 cds-card__minwidth">
-                            <div class="cds-card">
-                                <div class="cds-card__header">
-                                    <div class="cds-card__title">Mortgage</div>
-                                </div>
-                                <div class="cds-card__body">
-                                    <a href="#" class="cds-card__info">
-                                        <div class="cds-card__subtitle">Reservations Offer Outstanding</div>
-                                        <div class="cds-card__value cds-card__value--inactive">0</div>
-                                    </a>
-                                    <a href="#" class="cds-card__info">
-                                        <div class="cds-card__subtitle">Offer Due to Expire (Before CML)</div>
-                                        <div class="cds-card__value">2</div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="col-2 cds-card__minwidth">
-                            <div class="cds-card">
+                            <div class="cds-card cds-card--md">
                                 <div class="cds-card__header">
                                     <div class="cds-card__title">Completions</div>
                                 </div>
@@ -212,7 +189,7 @@
                         </div>
 
                         <div class="col-2 cds-card__minwidth">
-                            <a href="#" class="cds-card cds-card--single">
+                            <a href="#" class="cds-card cds-card--single cds-card--md">
                                 <div class="cds-card__header">
                                     <div class="cds-card__title">Completions</div>
                                 </div>
@@ -235,7 +212,7 @@
                     </div>
                     <div class="row cds-cards-row">
                         <div class="col-3 cds-card__minwidth">
-                            <div class="cds-card">
+                            <div class="cds-card cds-card--lg cds-card--top">
                                 <div class="cds-card__header">
                                     <div class="cds-card__title">My Actions today</div>
                                     <div class="cds-card__actions">
@@ -278,7 +255,7 @@
                             </div>
                         </div>
                         <div class="col-4 cds-card__minwidth">
-                            <div class="cds-card">
+                            <div class="cds-card cds-card--lg cds-card--top">
                                 <div class="cds-card__header">
                                     <div class="cds-card__title">My Actions today</div>
                                     <div class="cds-card__actions">
@@ -333,6 +310,39 @@
                                                     <td>Some subject here</td>
                                                     <td><a class="cds-link" href="http://some-link.com">http://some-link.com</a></td>
                                                 </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="cds-userpic">
+                                                            <img src="./images/user-avatar.jpg" alt="">
+                                                        </span>
+                                                        <span>Andrew Walker</span>
+                                                    </td>
+                                                    <td>14:15</td>
+                                                    <td>Some subject here</td>
+                                                    <td><a class="cds-link" href="http://some-link.com">http://some-link.com</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="cds-userpic">
+                                                            <img src="./images/user-avatar.jpg" alt="">
+                                                        </span>
+                                                        <span>Andrew Walker</span>
+                                                    </td>
+                                                    <td>14:15</td>
+                                                    <td>Some subject here</td>
+                                                    <td><a class="cds-link" href="http://some-link.com">http://some-link.com</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="cds-userpic">
+                                                            <img src="./images/user-avatar.jpg" alt="">
+                                                        </span>
+                                                        <span>Andrew Walker</span>
+                                                    </td>
+                                                    <td>14:15</td>
+                                                    <td>Some subject here</td>
+                                                    <td><a class="cds-link" href="http://some-link.com">http://some-link.com</a></td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -348,8 +358,8 @@
                 </div>
                 <div class="cds-accordion__body">
                     <div class="row cds-cards-row">
-                        <div class="col-3 cds-card__minwidth">
-                            <div class="cds-card">
+                        <div class="col-4 cds-card__minwidth">
+                            <div class="cds-card cds-card--lg">
                                 <div class="cds-card__header">
                                     <div class="cds-card__title">Footfall</div>
                                     <div class="cds-card__actions">
@@ -365,7 +375,7 @@
                         </div>
         
                         <div class="col-3 cds-card__minwidth">
-                            <div class="cds-card">
+                            <div class="cds-card cds-card--lg">
                                 <div class="cds-card__header">
                                     <div class="cds-card__title">Card title</div>
                                     <div class="cds-card__actions">
@@ -381,7 +391,7 @@
                     </div>
                     <div class="row cds-cards-row">
                         <div class="col-2 cds-card__minwidth">
-                            <div class="cds-card">
+                            <div class="cds-card cds-card--md">
                                 <div class="cds-card__header">
                                     <div class="cds-card__title">Leads</div>
                                 </div>
@@ -399,7 +409,7 @@
                         </div>
         
                         <div class="col-2 cds-card__minwidth">
-                            <div class="cds-card">
+                            <div class="cds-card cds-card--md">
                                 <div class="cds-card__header">
                                     <div class="cds-card__title">Level of Interest</div>
                                 </div>
@@ -421,7 +431,7 @@
                         </div>
         
                         <div class="col-3 cds-card__minwidth">
-                            <div class="cds-card">
+                            <div class="cds-card cds-card--md">
                                 <div class="cds-card__header">
                                     <div class="cds-card__title">Prospects</div>
                                 </div>
@@ -446,8 +456,8 @@
                             </div>
                         </div>
         
-                        <div class="col-3 cds-card__minwidth">
-                            <div class="cds-card">
+                        <div class="col-2 cds-card__minwidth">
+                            <div class="cds-card cds-card--md">
                                 <div class="cds-card__header">
                                     <div class="cds-card__title">Bedroom Leads</div>
                                 </div>
@@ -464,20 +474,12 @@
                                         <div class="cds-card__subtitle">Three Bedroom</div>
                                         <div class="cds-card__value cds-card__value--inactive">0</div>
                                     </a>
-                                    <a href="#" class="cds-card__info">
-                                        <div class="cds-card__subtitle">Four Bedroom</div>
-                                        <div class="cds-card__value cds-card__value--inactive">0</div>
-                                    </a>
-                                    <a href="#" class="cds-card__info">
-                                        <div class="cds-card__subtitle">Five+ Bedroom</div>
-                                        <div class="cds-card__value cds-card__value--inactive">0</div>
-                                    </a>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-1 cds-card__minwidth">
-                            <a href="#" class="cds-card cds-card--single">
+                            <a href="#" class="cds-card cds-card--single cds-card--md">
                                 <div class="cds-card__header">
                                     <div class="cds-card__title">Avaliable Plots to be Reserved</div>
                                 </div>
@@ -488,11 +490,11 @@
                                 </div>
                             </a>
                         </div>
-        
-                        <div class="col-2 cds-card__minwidth">
-                            <div class="cds-card">
+
+                        <div class="col-4 cds-card__minwidth">
+                            <div class="cds-card cds-card--lg">
                                 <div class="cds-card__header">
-                                    <div class="cds-card__title">Workbench</div>
+                                    <div class="cds-card__title">Footfall</div>
                                     <div class="cds-card__actions">
                                         <button class="cds-btn cds-btn--icon"><img src="images/Printer.svg" alt=""></button>
                                         <button class="cds-btn cds-btn--icon"><img src="images/Refresh.svg" alt=""></button>
@@ -500,34 +502,14 @@
                                     </div>
                                 </div>
                                 <div class="cds-card__body">
-                                    <a href="#" class="cds-card__info">
-                                        <div class="cds-card__subtitle">Prospects</div>
-                                        <div class="cds-card__value cds-card__value--inactive">0</div>
-                                    </a>
-                                    <a href="#" class="cds-card__info">
-                                        <div class="cds-card__subtitle">Activity</div>
-                                        <div class="cds-card__value">1</div>
-                                    </a>
-                                    <a href="#" class="cds-card__info">
-                                        <div class="cds-card__subtitle">Customer</div>
-                                        <div class="cds-card__value">3</div>
-                                    </a>
+                                    <div id="spline-chart-example" class="c3"></div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-1 cds-card__minwidth">
-                            <a href="#" class="cds-card cds-card--single">
-                                <div class="cds-card__header">
-                                    <div class="cds-card__title">Avaliable Plots to be Reserved</div>
-                                </div>
-                                <div class="cds-card__body">
-                                    <div class="cds-card__info">
-                                        <div class="cds-card__value cds-card__value--inactive cds-card__value--large">0</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+
+
+
                     </div>
                     <div class="row cds-cards-row">
                         <div class="col-2 cds-card__minwidth">
@@ -680,12 +662,15 @@
 
 
         <div class="cds-tabcontent" id="salesAdmin">
+            <div class="cds-tabcontent__bg" style="background: rgba(66, 73, 88, 0.1);"></div>
             Sales Admin Tab
         </div>
         <div class="cds-tabcontent" id="Reports">
+            <div class="cds-tabcontent__bg" style="background: rgba(66, 73, 88, 0.1);"></div>
             Reports Tab
         </div>
         <div class="cds-tabcontent" id="Company">
+            <div class="cds-tabcontent__bg" style="background: rgba(66, 73, 88, 0.1);"></div>
             Company Tab
         </div>
     </section>

@@ -13,3 +13,7 @@ h5, .h5 {
 .text-dark-gray {
   color: rgba(74, 74, 74, 0.8);
 }
+
+.text-bold {
+  font-weight: bold !important;
+}
