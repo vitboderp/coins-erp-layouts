@@ -1,0 +1,96 @@
+.cds-timeline {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    &__step {
+        background: #FFFFFF;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-top-right-radius: 1px;
+        border-bottom-right-radius: 1px;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        height: 36px;
+        padding: 8px 4px 8px 18px;
+        box-sizing: border-box;
+        position: relative;
+        &:last-child {
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            padding-right: 12px;
+            &:after {
+                display: none;
+            }
+        }
+        &:first-child {
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            padding-left: 12px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            right: -11px;
+            width: 22px;
+            height: 21px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+            transform: rotate(45deg) skew(10deg, 10deg);
+            border-radius: 2px 4px 2px 0px;
+            z-index: 1;
+            background: #FFFFFF;
+        }
+
+        &--done {
+            .cds-timeline__icon {
+                color: #40B915;
+            }
+        }
+
+        &--progress {
+            background: #4A4A4A;
+            .cds-timeline__name {
+                color: #FFFFFF;
+            }
+            .cds-timeline__icon {
+                color: #FDB31A;
+            }
+            &:after {
+                background: #4A4A4A;
+            }
+        }
+
+        &--uncomplete {
+            background: #EDEDEF;
+            .cds-timeline__icon {
+                color: #767676;
+            }
+            &:after {
+                background: #EDEDEF;
+            }
+        }
+    }
+
+    &__icon {
+        margin-right: 4px;
+    }
+
+    &__name {
+        color: #2A2A2A;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        position: relative;
+        z-index: 2;
+    }
+}
