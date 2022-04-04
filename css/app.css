@@ -1959,6 +1959,10 @@ input[type="search"]::-webkit-search-results-decoration {
   font-size: 32px;
   line-height: 40px;
   color: #4A4A4A;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .cds-card__value--inactive {
@@ -1984,6 +1988,15 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .cds-card__plus:hover {
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cds-card__bullet {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
 }
 
 .cds-card-add {

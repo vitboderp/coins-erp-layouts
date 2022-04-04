@@ -115,6 +115,8 @@
         font-size: 32px;
         line-height: 40px;
         color: #4A4A4A;
+        display: inline-flex;
+        align-items: center;
 
         &--inactive {
             opacity: 0.5;
@@ -139,10 +141,14 @@
         &:hover {
             border: 1px solid rgba(0, 0, 0, 0.1);
         }
-        
-        .cds-btn {
-            
-        }
+    }
+
+    &__bullet {
+        display: inline-flex;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 4px;
     }
 
     &-add {
