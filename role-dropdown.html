@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ERP+ HTML</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body style="background: rgba(66, 73, 88, 0.1);">
+    <header class="header">
+        <h3>ERP+ html</h3>
+    </header>
+    <section class="section">
+        <h1>
+            Role dropdown
+        </h1>
+    </section>
+
+    <section class="section">
+        <div style="padding: 20px;">
+            <div style="width: 240px;">
+                <button class="cds-dropdown-btn cds-btn">
+                    <div class="cds-dropdown-btn__icon"><i class="icn icn-Helmet-Filled"></i></div>
+                    <div class="cds-dropdown-btn__data">
+                        <div class="cds-dropdown-btn__type">Role</div>
+                        <div class="cds-dropdown-btn__value">Site Sales</div>
+                    </div>
+                    <div class="cds-dropdown-btn__chevron"><i class="icn icn-Chevron-Down-Filled"></i></div>
+                </button>
+            </div>
+            <p>& class .is-active</p>
+            <div style="width: 240px;">
+                <button class="cds-dropdown-btn cds-btn is-active">
+                    <div class="cds-dropdown-btn__icon"><i class="icn icn-Helmet-Filled"></i></div>
+                    <div class="cds-dropdown-btn__data">
+                        <div class="cds-dropdown-btn__type">Role</div>
+                        <div class="cds-dropdown-btn__value">Site Sales</div>
+                    </div>
+                    <div class="cds-dropdown-btn__chevron"><i class="icn icn-Chevron-Down-Filled"></i></div>
+                </button>
+            </div>
+
+            <h3>Dropdown</h3>
+            <div class="cds-dropdown cds-dropdown--role">
+                <div class="cds-dropdown__body">
+                    <div class="cds-dropdown__search">
+                        <div class="cds-input cds-input--search">
+                            <input class="cds-form-control" type="search" placeholder="Search for something...">
+                            <i class="icn icn-Search"></i>
+                        </div>
+                    </div>
+                    <div class="cds-dropdown__row">
+                        <a href="#" class="cds-dropdown__item">
+                            <div class="cds-role-icon">
+                                <i class="icn icn-Helmet-Filled"></i>
+                            </div>
+                            <div class="cds-role-title">Site Sales</div>
+                            <ul class="cds-dropdown__list">
+                                <li>Site Summary</li>
+                                <li>Prospects</li>
+                                <li>Sales and Marketing</li>
+                                <li>Forecasts</li>
+                                <li>Financials</li>
+                                <li>Reports</li>
+                                <li>Admin</li>
+                                <li>Configuration</li>
+                            </ul>
+                        </a>
+                        <a href="#" class="cds-dropdown__item">
+                            <div class="cds-role-icon">
+                                <i class="icn icn-Helmet-Filled"></i>
+                            </div>
+                            <div class="cds-role-title">Role 2</div>
+                            <ul class="cds-dropdown__list">
+                                <li>Bank & Cash Management</li>
+                                <li>Financial Reporting</li>
+                                <li>General Finance</li>
+                                <li>Sales Ladger</li>
+                                <li>Taxation</li>
+                                <li>Analytics & Reporting</li>
+                            </ul>
+                        </a>
+                        <a href="#" class="cds-dropdown__item">
+                            <div class="cds-role-icon">
+                                <i class="icn icn-Helmet-Filled"></i>
+                            </div>
+                            <div class="cds-role-title">Role 3</div>
+                                <ul class="cds-dropdown__list">
+                                    <li>Bank & Cash Management</li>
+                                    <li>Financial Reporting</li>
+                                    <li>General Finance</li>
+                                    <li>Sales Ladger</li>
+                                    <li>Taxation</li>
+                                    <li>Analytics & Reporting</li>
+                                </ul>
+                        </a>
+                        <a href="#" class="cds-dropdown__item">
+                            <div class="cds-role-icon">
+                                <i class="icn icn-Helmet-Filled"></i>
+                            </div>
+                            <div class="cds-role-title">Role 4</div>
+                            <ul class="cds-dropdown__list">
+                                <li>Bank & Cash Management</li>
+                                <li>Financial Reporting</li>
+                                <li>General Finance</li>
+                                <li>Sales Ladger</li>
+                                <li>Taxation</li>
+                                <li>Analytics & Reporting</li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Search result</h3>
+            <div style="width: 240px;">
+                <div class="cds-west-pane">
+                    <div class="cds-west-search">
+                        <div class="cds-input cds-input--search">
+                            <input class="cds-form-control" type="search" placeholder="Search for something...">
+                            <i class="icn icn-Search"></i>
+                        </div>
+                    </div>
+                    <div class="cds-search-results">
+                        <div class="cds-search-results__counter">2 Search results:</div>
+                        <div class="cds-search-results__item">
+                            <div class="cds-search-results__icon"><i class="icn icn-Helmet-Filled"></i></div>
+                            <div class="cds-search-results__data">
+                                <div class="cds-search-results__name">Site Sales</div>
+                                <div class="text-light text-uppercase text-small">PROSPECTS / SALES</div>
+                                <a href="#" class="cds-search-results__link">Sales</a>
+                                <a href="#" class="cds-search-results__link">Sales</a>
+                                <a href="#" class="cds-search-results__link">Sales</a>
+                            </div>
+                        </div>
+                        <div class="cds-search-results__item">
+                            <div class="cds-search-results__icon"><i class="icn icn-Helmet-Filled"></i></div>
+                            <div class="cds-search-results__data">
+                                <div class="cds-search-results__name">Role #2</div>
+                                <div class="text-light text-uppercase text-small">MENU ITEM / CATEGORY</div>
+                                <a href="#" class="cds-search-results__link">Sales</a>
+                            </div>
+                        </div>
+                        <div class="cds-search-results__item">
+                            <div class="cds-search-results__icon"><i class="icn icn-Helmet-Filled"></i></div>
+                            <div class="cds-search-results__data">
+                                <div class="cds-search-results__name">Role #3</div>
+                                <div class="text-light text-uppercase text-small">PROSPECTS / SALES</div>
+                                <a href="#" class="cds-search-results__link">Sales</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>

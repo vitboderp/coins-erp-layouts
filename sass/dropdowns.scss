@@ -61,4 +61,89 @@
             }
         }
     }
+
+    &--role {
+        .cds-dropdown__body {
+            display: flex;
+            flex-direction: column;
+            padding: 12px;
+        }
+        .cds-dropdown__search {
+            margin-bottom: 12px;
+            .cds-input {
+                width: 200px;
+            }
+            .cds-form-control {
+                width: 100%;
+            }
+        }
+
+        .cds-dropdown__row {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            min-width: 0;
+            padding: 0;
+        }
+
+        .cds-dropdown__item {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-right: none;
+            flex: 1;
+            text-decoration: none;
+            color: #2A2A2A;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 20px;
+
+            &:last-child {
+                border-right: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .cds-role-icon {
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
+            border-radius: 4px;
+            background: #E9926D;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            .icn {
+                font-size: 14px;
+                line-height: 1;
+                color: #fff;
+            }
+        }
+
+        .cds-role-title {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 16px;
+        }
+
+        .cds-dropdown__list {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0 -8px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            width: calc(100% + 16px);
+
+            & > li {
+                display: block;
+                white-space: nowrap;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                padding: 4px 16px 4px 8px;
+                min-width: 200px;
+            }
+        }
+    }
 }

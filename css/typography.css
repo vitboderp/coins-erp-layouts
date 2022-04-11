@@ -20,6 +20,14 @@ h5, .h5 {
   color: rgba(74, 74, 74, 0.8);
 }
 
+.text-light {
+  color: #767676;
+}
+
 .text-bold {
   font-weight: bold !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }

@@ -70,3 +70,104 @@
 .cds-dropdown__item--nohover:hover {
   background: #fff;
 }
+
+.cds-dropdown--role .cds-dropdown__body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 12px;
+}
+
+.cds-dropdown--role .cds-dropdown__search {
+  margin-bottom: 12px;
+}
+
+.cds-dropdown--role .cds-dropdown__search .cds-input {
+  width: 200px;
+}
+
+.cds-dropdown--role .cds-dropdown__search .cds-form-control {
+  width: 100%;
+}
+
+.cds-dropdown--role .cds-dropdown__row {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  min-width: 0;
+  padding: 0;
+}
+
+.cds-dropdown--role .cds-dropdown__item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: none;
+  -ms-flex: 1;
+      flex: 1;
+  text-decoration: none;
+  color: #2A2A2A;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  padding: 20px;
+}
+
+.cds-dropdown--role .cds-dropdown__item:last-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cds-dropdown--role .cds-role-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 4px;
+  background: #E9926D;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-bottom: 12px;
+}
+
+.cds-dropdown--role .cds-role-icon .icn {
+  font-size: 14px;
+  line-height: 1;
+  color: #fff;
+}
+
+.cds-dropdown--role .cds-role-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+.cds-dropdown--role .cds-dropdown__list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 0;
+  margin: 0 -8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  width: calc(100% + 16px);
+}
+
+.cds-dropdown--role .cds-dropdown__list > li {
+  display: block;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 4px 16px 4px 8px;
+  min-width: 200px;
+}
