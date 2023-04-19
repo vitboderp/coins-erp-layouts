@@ -1,11 +1,13 @@
 'use strict';
 
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),
+    // sass = require('gulp-sass'),
     watch = require('gulp-watch'),
     autoprefixer = require('gulp-autoprefixer'),
     livereload = require('gulp-livereload'),
     connect = require('gulp-connect');
+
+const sass = require('gulp-sass')(require('sass'));
 
 function conn(cb) {
   connect.server({

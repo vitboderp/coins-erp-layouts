@@ -5,7 +5,6 @@
 .cds-west-search {
   padding: 8px;
 }
-
 .cds-west-search .cds-input,
 .cds-west-search .cds-form-control {
   width: 100%;
@@ -18,58 +17,59 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 4px 12px;
 }
-
 .cds-search-results__item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 12px 12px 24px 12px;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-align: start;
-      align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   color: #2A2A2A;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-
 .cds-search-results__icon {
   width: 20px;
   height: 20px;
   min-width: 20px;
   border-radius: 4px;
   background: #E9926D;
+  display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-right: 8px;
 }
-
 .cds-search-results__icon .icn {
   font-size: 14px;
   line-height: 1;
   color: #fff;
 }
-
 .cds-search-results__data {
   width: 100%;
 }
-
 .cds-search-results__name {
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 4px;
 }
-
 .cds-search-results .text-uppercase {
   margin-bottom: 4px;
 }
-
 .cds-search-results__link {
   font-size: 12px;
   line-height: 16px;
@@ -80,10 +80,10 @@
   width: calc(100% + 52px);
   margin-left: -40px;
   padding: 4px 8px 4px 40px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-bottom: 0;
 }
-
 .cds-search-results__link:hover {
   background: rgba(0, 0, 0, 0.1);
 }

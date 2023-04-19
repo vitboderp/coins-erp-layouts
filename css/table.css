@@ -6,40 +6,34 @@
   line-height: 16px;
   color: #2A2A2A;
 }
-
 .cds-table td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0 8px;
 }
-
 .cds-table td > * {
   vertical-align: middle;
 }
-
 .cds-table td .cds-userpic {
   margin-right: 4px;
 }
-
 .cds-table thead {
   font-weight: bold;
   font-size: 12px;
   line-height: 16px;
 }
-
 .cds-table thead td {
   height: 24px;
 }
-
 .cds-table tbody td {
   height: 40px;
 }
-
 .cds-table tbody tr {
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
-
 .cds-table tbody tr:hover {
   background: rgba(66, 73, 88, 0.1);
 }

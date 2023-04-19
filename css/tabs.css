@@ -6,25 +6,27 @@
   z-index: 3;
   background: #fff;
 }
-
 .cds-tabs__btn {
+  display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 28px;
   padding: 0 8px;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 4px;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;
   color: #767676;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
-
 .cds-tabs__btn.is-active {
   background: rgba(0, 0, 0, 0.1);
   color: #2A2A2A;
@@ -34,7 +36,6 @@
   padding: 16px 20px;
   position: relative;
 }
-
 .cds-tabcontent__bg {
   position: absolute;
   top: 0;
@@ -44,10 +45,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  opacity: .3;
+  opacity: 0.3;
   z-index: 1;
 }
-
 .cds-tabcontent__bg ~ * {
   position: relative;
   z-index: 2;

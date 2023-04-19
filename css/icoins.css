@@ -1,14 +1,13 @@
 @font-face {
-  font-family: 'icoins';
+  font-family: "icoins";
   src: url("../fonts/iCoins.ttf?73ow0y") format("truetype"), url("../fonts/iCoins.woff?73ow0y") format("woff"), url("../fonts/iCoins.svg?73ow0y#icoins") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
-
 .icn {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icoins' !important;
+  font-family: "icoins" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;

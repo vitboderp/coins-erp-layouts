@@ -1,4 +1,5 @@
 .cds-userpic {
+  display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   border-radius: 50%;
@@ -8,23 +9,26 @@
 }
 
 .cds-circle-icon {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 50px;
   height: 50px;
   margin-right: 16px;
   border-radius: 25px;
   background: linear-gradient(135deg, #F18078 0%, #E16057 100%);
-  box-shadow: inset 1px 1px 4px rgba(255, 255, 255, 0.51), inset -1px -1px 4px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 1px 1px 4px rgba(255, 255, 255, 0.51), inset -1px -1px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 1px 1px 4px rgba(255, 255, 255, 0.51), inset -1px -1px 4px rgba(0, 0, 0, 0.1);
   color: #fff;
   font-size: 28px;
   line-height: 28px;
 }
-
 .cds-circle-icon--sm {
   width: 32px;
   height: 32px;

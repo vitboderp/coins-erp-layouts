@@ -30,23 +30,21 @@
   stroke-linecap: round;
   stroke-dasharray: 0.1 10;
   stroke-width: 10;
-  transform: translate(6px, 1px);
+  -webkit-transform: translate(6px, 1px);
+          transform: translate(6px, 1px);
 }
 
 .c3-tooltip-container {
   border-radius: 4px;
   overflow: hidden;
 }
-
 .c3-tooltip-container .c3-tooltip th {
   background: #FBFBFB;
   color: inherit;
 }
-
 .c3-tooltip-container .c3-tooltip td {
   border-left: none;
 }
-
 .c3-tooltip-container .c3-tooltip td > span {
   border-radius: 5px;
 }

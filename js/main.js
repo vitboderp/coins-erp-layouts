@@ -188,6 +188,7 @@ for (i = 0; i < openAccordion.length; ++i) {
 
 // TABS
 function openTab(evt, tabName) {
+  evt.preventDefault();
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("cds-tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
