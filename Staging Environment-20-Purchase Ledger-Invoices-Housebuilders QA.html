@@ -66,7 +66,7 @@
     <div class="option action columnset" id="columnset" value="|PDR26913">PDR26913</div>
       </div>
       
-      <table id="browseContent" class="browse" style="overflow:hidden;" width="80%" height="100%">
+      <table id="browseContent" class="browse" style="overflow:hidden;" width="100%" height="100%">
     <tbody><tr id="bodyTitle" style="display:none" class="bodyhead"></tr><tr id="bodyHead" class="bodyhead"><th width="1%" class="noresize"><button class="buttonanchor image-button colsets" id="filterSelected" onclick="return false;" href="filteroff" title="Rows Selected/Column Sets"><img src="wousvg.p?style=v1105&amp;colour=%23ffffff&amp;icon=menu_off$.svg" id="button2" class="button" border="0"></button><img src="wousvg.p?style=v1105&amp;colour=%23ffffff&amp;icon=busy$.svg" border="0" class="button fa-spin" style="display:none" id="browseBusy"></th><th width="1%" class="noresize" id="action"><div class="actionth"></div></th><th width="6%" align="Left" class="current" title="Sorted ascending.  Click to reverse"><div align="Left"><div><a class="th columnsort" href="sort" id="QuerySortOrder" value="kco-,ain_inv-" title="Sorted ascending.  Click to reverse" onclick="actionThis(this);return false;"><input type="hidden" id="value" value="kco-,ain_inv-"></a><div class="sortlabel">Internal Reference</div><div class="sortimage"><img src="wousvg.p?style=v1105&amp;colour=%23ffffff&amp;icon=ascend$.svg" border="0"></div></div></div></th><th width="6%" align="left" class="sortable" title="Click to sort by this column"><div align="left"><div><a class="th columnsort" href="sort" id="QuerySortOrder" value="kco+,ain_supref+" title="Click to sort by this column" onclick="actionThis(this);return false;"><input type="hidden" id="value" value="kco+,ain_supref+"></a><div class="sortlabel">Supplier Reference</div><div class="sortimage"><img src="wousvg.p?style=v1105&amp;colour=%23ffffff&amp;icon=sortable$.svg" border="0"></div></div></div></th><th width="2%" align="Center"><p class="th">Doc Curr</p></th><th width="6%" align="left" class="sortable" title="Click to sort by this column"><div align="left"><div><a class="th columnsort" href="sort" id="QuerySortOrder" value="kco+,avm_num+" title="Click to sort by this column" onclick="actionThis(this);return false;"><input type="hidden" id="value" value="kco+,avm_num+"></a><div class="sortlabel">Supplier Account</div><div class="sortimage"><img src="wousvg.p?style=v1105&amp;colour=%23ffffff&amp;icon=sortable$.svg" border="0"></div></div></div></th><th width="9%" align="left"><p class="th">Supplier Name</p></th><th width="5%" align="Center" class="sortable" title="Click to sort by this column"><div align="Center"><div><a class="th columnsort" href="sort" id="QuerySortOrder" value="kco+,ain_idate+" title="Click to sort by this column" onclick="actionThis(this);return false;"><input type="hidden" id="value" value="kco+,ain_idate+"></a><div class="sortlabel">Invoice Date</div><div class="sortimage"><img src="wousvg.p?style=v1105&amp;colour=%23ffffff&amp;icon=sortable$.svg" border="0"></div></div></div></th><th width="3%" align="Center"><p class="th">Txn Type</p></th><th width="9%" align="left"><p class="th">PO Number</p></th><th width="8%" align="left"><p class="th">Analysis</p></th><th width="6%" align="right"><p class="th">Gross Amount</p></th><th width="6%" align="right"><p class="th">Discount</p></th><th width="6%" align="right"><p class="th">Balance</p></th><th width="2%" align="Center"><p class="th"></p></th><th width="2%" align="left"><p class="th">Dist Type</p></th><th width="4%" align="left"><p class="th">
       Status</p></th><th width="3%" align="left"><p class="th"></p></th><th width="4%" align="center"><p class="th">Bad Debt</p></th><th align="left"><p class="th">Invoice Documents</p></th><th align="left"><p class="th">Invoice Notes</p></th>
 
@@ -174,7 +174,7 @@
 
       
       <!-- PDF VIEWER RESIZABLE  -->
-      <div id="resizable" class="doc-view" style="width: 20%">
+      <div id="DocViewResizable" class="doc-view" style="width: 20%">
         <div class="doc-view__header">
           <div class="cds-tabs">
             <button class="cds-btn cds-tabs__btn is-active" onclick="openTab(event, 'invoicesTab')" id="defaultTab">Invoices</button>
@@ -182,20 +182,32 @@
           </div>
           <div class="doc-view__actions">
             <a href="#" class="doc-view__expand">Expand</a>
-            <button class="doc-view__close"><i class="icn icn-Close-Filled"></i></button>
+            <button class="doc-view__close" onclick="closeSidebar();"><i class="icn icn-Close-Filled"></i></button>
           </div>
         </div>
         <div class="doc-view__resizer">
           <div class="doc-view__drawer"></div>
         </div>
-        <div class="doc-view__body">
+        <div class="doc-view__body" id="documentsContainer">
+
+          <div class="doc-actions" id="documentActions" style="display: none;">
+            <div class="doc-actions__counter">
+              <button type="button" class="doc-uncheck-btn" id="uncheckAllDocs"><i class="icn icn-Reject-Filled"></i></button>
+              <span id="checkedDocumentsCounter"></span>
+            </div>
+            <div class="doc-actions__buttons">
+              <button type="button" class="doc-actions__btn" id="downloadDocs"><i class="icn icn-Download"></i></button>
+              <button type="button" class="doc-actions__btn"><i class="icn icn-Email-Filled"></i></button>
+              <button type="button" class="doc-actions__btn" id="printBtn"><i class="icn icn-Print-Filled"></i></button>
+            </div>
+          </div>
 
 
 
           <div class="cds-tabcontent" id="invoicesTab">
 
-            <div class="doc-accordion">
-              <div class="doc-accordion__head">
+            <!-- <div class="doc-accordion">
+              <div class="doc-accordion__head defaultOpenDoc">
                 <div class="doc-accordion__type">
                   <i class="icn icn-Chevron-Right-Filled"></i>
                   <span>21080029</span>
@@ -207,46 +219,52 @@
               </div>
               <div class="doc-accordion__body">
                 <div class="doc-list">
-                  <button class="doc-list__scroll doc-list__scroll-left"><i class="icn icn-Chevron-Left-Filled"></i></button>
-                  <button class="doc-list__scroll doc-list__scroll-right"><i class="icn icn-Chevron-Right-Filled"></i></button>
+                  <button type="button" class="doc-list__scroll doc-list__scroll-left"><i class="icn icn-Chevron-Left-Filled"></i></button>
+                  <button type="button" class="doc-list__scroll doc-list__scroll-right"><i class="icn icn-Chevron-Right-Filled"></i></button>
 
                   <div class="doc-list__thumbnails">
                     <div class="doc-list__thumb">
-                      <div class="doc-list__thumb-checkbox">
-                        <!-- <input type="checkbox" name="sur_uservalue$H$sur_rsschannels" id="sur_uservalue$H$sur_rsschannels" value="0"  data-errorcodes=",," inputseq="20" datatype="CH" class=""> -->
-                      </div>
-                      <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
-                      <div class="doc-list__thumb-name">23-10-22.jpg</div>
+                      <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
+                      <div class="doc-list__thumb-img" style="background-image: url('https://img.freepik.com/free-vector/gradient-luxury-law-firm-letterhead_23-2149336490.jpg?w=2000');" data-url="https://img.freepik.com/free-vector/gradient-luxury-law-firm-letterhead_23-2149336490.jpg?w=2000"></div>
+                      <div class="doc-list__thumb-name">23-10-22_long_name_item.jpg</div>
                     </div>
                     <div class="doc-list__thumb">
-                      <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
-                      <div class="doc-list__thumb-name">home.jpg</div>
-                    </div>
-                    <div class="doc-list__thumb">
-                      <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
-                      <div class="doc-list__thumb-name">specification.pdf</div>
-                    </div>
-                    <div class="doc-list__thumb">
-                      <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
-                      <div class="doc-list__thumb-name">23-10-22.jpg</div>
-                    </div>
-                    <div class="doc-list__thumb">
-                      <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
-                      <div class="doc-list__thumb-name">23-10-22.jpg</div>
-                    </div>
-                    <div class="doc-list__thumb">
+                      <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
                       <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
                       <div class="doc-list__thumb-name">home.jpg</div>
                     </div>
                     <div class="doc-list__thumb">
+                      <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
                       <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
                       <div class="doc-list__thumb-name">specification.pdf</div>
                     </div>
                     <div class="doc-list__thumb">
+                      <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
                       <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
                       <div class="doc-list__thumb-name">23-10-22.jpg</div>
                     </div>
                     <div class="doc-list__thumb">
+                      <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
+                      <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
+                      <div class="doc-list__thumb-name">23-10-22.jpg</div>
+                    </div>
+                    <div class="doc-list__thumb">
+                      <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
+                      <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
+                      <div class="doc-list__thumb-name">home.jpg</div>
+                    </div>
+                    <div class="doc-list__thumb">
+                      <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
+                      <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
+                      <div class="doc-list__thumb-name">specification.pdf</div>
+                    </div>
+                    <div class="doc-list__thumb">
+                      <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
+                      <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
+                      <div class="doc-list__thumb-name">23-10-22.jpg</div>
+                    </div>
+                    <div class="doc-list__thumb">
+                      <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
                       <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
                       <div class="doc-list__thumb-name">23-10-22.jpg</div>
                     </div>
@@ -262,13 +280,14 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
+
           </div>
 
 
           <div class="cds-tabcontent" id="relatedTab" style="display: none;">
             <div class="doc-accordion">
-              <div class="doc-accordion__head defaultOpenDoc">
+              <div class="doc-accordion__head">
                 <div class="doc-accordion__type">
                   <i class="icn icn-Chevron-Right-Filled"></i>
                   <span>PO’s</span>
@@ -296,7 +315,9 @@
               <div class="doc-accordion__body">
                 <!-- File input area  -->
                 <div class="form-group doc-file-area">
-                  <input type="file" name="doc-files" id="doc-files" required="required" multiple="multiple"/>
+                  <form action="">
+                    <input type="file" name="doc-files" required="required" multiple="multiple"/>
+                  </form>
                   <div class="doc-file__dummy">
                     <div class="doc-file__success"><span></span> has been selected</div>
                     <div class="doc-file__default">
