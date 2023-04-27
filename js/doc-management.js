@@ -1,12 +1,7 @@
 $(document).ready(function(){
     setupAccordion(document.getElementsByClassName("doc-accordion__head"));
     showThumbPreview();
-    $( "#DocViewResizable" ).hide();
 });
-
-
-
-
 
 
 
@@ -31,14 +26,9 @@ function closeSidebar() {
     $('#browseContent').width('100%');
     $( "#DocViewResizable" ).hide();
 }
+// END DOC VIEW RESIZE (jQueryUI)
 
 
-
-
-
-
-      
-  
 // TABS
 function openTab(evt, tabName) {
     evt.preventDefault();
@@ -55,12 +45,6 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " is-active";
 }
 // END TABS
-
-
-
-  
-
-
 
   
 // ACCORDION
@@ -97,7 +81,6 @@ function updateMaxHeight(el, height) {
 // END ACCORDION
 
   
-  
 // FILE INPUT
 $(document).ready(function(){
     $('input[name="doc-files"]').change(function(e){
@@ -106,12 +89,6 @@ $(document).ready(function(){
     });
 });
 // END FILE INPUT
-  
-
-
-
-
-
 
 
 // doc scroll buttons
@@ -213,7 +190,6 @@ $(document).ready(function() {
 // end doc scroll buttons
 
 
-
 // SHOW PREVIEW
 function showThumbPreview() {
     $('.doc-list__thumb-img').click(function() {
@@ -232,8 +208,6 @@ function showThumbPreview() {
     });
 }
 // END SHOW PREVIEW
-
-
 
 
 // DOC ACTIONS
@@ -266,103 +240,80 @@ function chbxActions() {
         });
         $('#documentActions').hide();
     });
-
-    $('.doc-actions__btn').click(function(){
-        console.log('action');
-    });
+}
+// END DOC ACTIONS
 
 
+// DOWNLOADING DOCUMENTS
+function downloadSelectedDocs() {
+    const checkedCheckboxes = document.querySelectorAll('.doc-list__thumb-checkbox input[type="checkbox"]:checked');
 
-    // Get the download button
-    const downloadBtn = document.getElementById('downloadDocs');
+    if (checkedCheckboxes.length > 0) {
+        checkedCheckboxes.forEach(checkedCheckbox => {
+        const thumbnail = checkedCheckbox.closest('.doc-list__thumb').querySelector('.doc-list__thumb-img');
 
-    downloadBtn.addEventListener('click', () => {
-        const checkedCheckboxes = document.querySelectorAll('.doc-list__thumb-checkbox input[type="checkbox"]:checked');
+        const dataUrl = thumbnail.getAttribute('data-url');
 
-        if (checkedCheckboxes.length > 0) {
-            checkedCheckboxes.forEach(checkedCheckbox => {
+        fetch(dataUrl)
+            .then(response => response.blob())
+            .then(blob => {
+                const blobUrl = URL.createObjectURL(blob);
+
+                const downloadLink = document.createElement('a');
+                downloadLink.setAttribute('href', blobUrl);
+                downloadLink.setAttribute('download', '');
+                downloadLink.style.display = 'none';
+
+                document.body.appendChild(downloadLink);
+
+                downloadLink.click();
+
+                document.body.removeChild(downloadLink);
+                URL.revokeObjectURL(blobUrl);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+        });
+    }
+}
+// END DOWNLOADING DOCUMENTS
+
+
+// PRINTING DOCUMENTS
+function printSelectedDocs() {
+    const checkedCheckboxes = document.querySelectorAll('.doc-list__thumb-checkbox input[type="checkbox"]:checked');
+
+    if (checkedCheckboxes.length > 0) {
+        checkedCheckboxes.forEach(checkedCheckbox => {
             const thumbnail = checkedCheckbox.closest('.doc-list__thumb').querySelector('.doc-list__thumb-img');
 
             const dataUrl = thumbnail.getAttribute('data-url');
 
-            fetch(dataUrl)
-                .then(response => response.blob())
-                .then(blob => {
-                    const blobUrl = URL.createObjectURL(blob);
+            const image = new Image();
+            image.crossOrigin = "anonymous";
+            image.src = dataUrl;
 
-                    const downloadLink = document.createElement('a');
-                    downloadLink.setAttribute('href', blobUrl);
-                    downloadLink.setAttribute('download', '');
-                    downloadLink.style.display = 'none';
-
-                    document.body.appendChild(downloadLink);
-
-                    downloadLink.click();
-
-                    document.body.removeChild(downloadLink);
-                    URL.revokeObjectURL(blobUrl);
-                })
-                .catch(error => {
-                    console.error(error);
+            image.addEventListener('load', () => {
+                const printWindow = window.open('', '_blank');
+                printWindow.document.write(`<html><head><style>@media print{img{max-width: 100%; height: auto;}}</style></head><body><img src="${dataUrl}"></body></html>`);
+                printWindow.document.close();
+                
+                printWindow.addEventListener('load', () => {
+                printWindow.print();
                 });
             });
-        }
-    });
-
-
-// Get the print button
-const printBtn = document.getElementById('printBtn');
-
-// Add a click event listener to the print button
-printBtn.addEventListener('click', () => {
-  // Get all checked checkboxes
-  const checkedCheckboxes = document.querySelectorAll('.doc-list__thumb-checkbox input[type="checkbox"]:checked');
-
-  if (checkedCheckboxes.length > 0) {
-    // Loop through all checked checkboxes
-    checkedCheckboxes.forEach(checkedCheckbox => {
-      // Get the closest thumbnail image
-      const thumbnail = checkedCheckbox.closest('.doc-list__thumb').querySelector('.doc-list__thumb-img');
-
-      // Get the data-url attribute
-      const dataUrl = thumbnail.getAttribute('data-url');
-
-      // Create a new image element with the data-url as the source
-      const image = new Image();
-      image.crossOrigin = "anonymous"; // allow images to be loaded from different domains
-      image.src = dataUrl;
-
-      // Wait for the image to load and then trigger the print dialog
-      image.addEventListener('load', () => {
-        // Create a new window with the image
-        const printWindow = window.open('', '_blank');
-        printWindow.document.write(`<html><head><style>@media print{img{max-width: 100%; height: auto;}}</style></head><body><img src="${dataUrl}"></body></html>`);
-        printWindow.document.close();
-        
-        // Wait for the print window to load and then trigger the print dialog
-        printWindow.addEventListener('load', () => {
-          printWindow.print();
         });
-      });
-    });
-  }
-});
-
-
-
-
-
-
+    }
 }
+// END PRINTING DOCUMENTS
 
 
-$(document).ready(function() {
-    chbxActions();
-});
-// END DOC ACTIONS
+// EMAIL DOCUMENTS  
+  
+// END EMAIL DOCUMENTS
   
   
-
 // GENERATE RANDOM ID
 function generateRandomId(length) {
     let result = '';
