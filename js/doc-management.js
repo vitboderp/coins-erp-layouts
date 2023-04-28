@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    setupAccordion(document.getElementsByClassName("doc-accordion__head"));
+    // setupAccordion(document.getElementsByClassName("doc-accordion__head"));
     showThumbPreview();
 });
 
@@ -67,10 +67,10 @@ function setupAccordion(el) {
         });
     }
 
-    // var openDoc = document.querySelectorAll(".defaultOpenDoc");
-    // for (i = 0; i < openDoc.length; ++i) {
-    //     openDoc[i].click();
-    // };
+    var openDoc = document.querySelectorAll(".defaultOpenDoc");
+    for (i = 0; i < openDoc.length; ++i) {
+        openDoc[i].click();
+    };
 }
 
 // ACCORDION MAX-HEIGHT UPD
@@ -94,6 +94,17 @@ $(document).ready(function(){
 // doc scroll buttons
 function thumbsScrollLeft(btn) {
     event.preventDefault();
+
+    // debounce functionality
+    if (btn.disabled) {
+        return;
+    }
+    btn.disabled = true;
+    setTimeout(function () {
+        btn.disabled = false;
+    }, 1000);
+
+    // action
     var $item = $(btn).siblings('.doc-list__thumbnails'),
         $docList = $(btn).parent('.doc-list'),
         step = 200;
@@ -119,19 +130,28 @@ function thumbsScrollLeft(btn) {
 
     if (Math.abs(step) > parentX-thumbsX) {
         animateScroll(parentX-thumbsX);
-        console.log('last step left done');
     }
     else {
         animateScroll(step);
-        console.log('step left');
     }
 }
 
 function thumbsScrollRight(btn) {
     event.preventDefault();
+
+    // debounce functionality
+    if (btn.disabled) {
+        return;
+    }
+    btn.disabled = true;
+    setTimeout(function () {
+        btn.disabled = false;
+    }, 1000);
+
+    // action
     var $item = $(btn).siblings('.doc-list__thumbnails'),
-        $docList = $(btn).parent('.doc-list'),
-        step = 200;
+    $docList = $(btn).parent('.doc-list'),
+    step = 200;
 
     var parentX = $docList.offset().left,
         thumbsX = $item.offset().left,
@@ -156,37 +176,11 @@ function thumbsScrollRight(btn) {
 
     if (Math.abs(offset) > lastStep) {
         animateScroll(lastStep);
-        console.log('last step right done');
     }
     else {
         animateScroll(step);
-        console.log('step right');
     }  
 }
-
-$(document).ready(function() {
-    var canClick = true;
-    $('.doc-list__scroll-left').click(function() {
-        event.preventDefault();
-        if(canClick) {
-            canClick = false;
-            setTimeout(function() {
-                canClick = true;
-            }, 500);
-            thumbsScrollLeft(this);
-        }
-    });
-    $('.doc-list__scroll-right').click(function() {
-        event.preventDefault();
-        if(canClick) {
-            canClick = false;
-            setTimeout(function() {
-                canClick = true;
-            }, 500);
-            thumbsScrollRight(this);
-        }
-    });
-});
 // end doc scroll buttons
 
 
@@ -379,14 +373,13 @@ function showInvoiceData(el) {
             for (let i = 0; i < invoicesArr.length; i++) {
                 // console.log(invoicesArr[i].thumb);
                 invoicesTumbnails += `
-                <div class="doc-list__thumb">
-                    <div class="doc-list__thumb-checkbox">
-                        <input type="checkbox" name="thumb_selector" class="doc-list__checkbox">
-                    </div>
-                    <div class="doc-list__thumb-img" style="background-image: url('${invoicesArr[i].thumb}');" data-url="${invoicesArr[i].url}"></div>
-                    <div class="doc-list__thumb-name">${invoicesArr[i].name}</div>
-                </div>
-                `;
+                    <div class="doc-list__thumb">
+                        <div class="doc-list__thumb-checkbox">
+                            <input type="checkbox" name="thumb_selector" class="doc-list__checkbox">
+                        </div>
+                        <div class="doc-list__thumb-img" style="background-image: url('${invoicesArr[i].thumb}');" data-url="${invoicesArr[i].url}"></div>
+                        <div class="doc-list__thumb-name">${invoicesArr[i].name}</div>
+                    </div>`;
             }
 
             const randomId = generateRandomId(8);
@@ -395,47 +388,76 @@ function showInvoiceData(el) {
                 <div class="doc-accordion">
                 <div class="doc-accordion__head defaultOpenDoc" id=${randomId}>
                     <div class="doc-accordion__type">
-                    <i class="icn icn-Chevron-Right-Filled"></i>
-                    <span>${searchValue}</span>
+                        <i class="icn icn-Chevron-Right-Filled"></i>
+                        <span>${searchValue}</span>
                     </div>
                     <div class="doc-accordion__actions">
-                    <div class="doc-accordion__counter">${invoicesArr.length} files</div>
-                    <button type="button" class="doc-accordion__add">Add File</button>
+                        <div class="doc-accordion__counter">${invoicesArr.length} files</div>
+                        <form action="" class="doc-add-form">
+                            <input type="file" name="doc-files" required="required" multiple="multiple"/>
+                            <button type="button" class="doc-accordion__add">Add File</button>
+                        </form>
                     </div>
                 </div>
                 <div class="doc-accordion__body">
                     <div class="doc-list">
-                    <button type="button" class="doc-list__scroll doc-list__scroll-left"><i class="icn icn-Chevron-Left-Filled"></i></button>
-                    <button type="button" class="doc-list__scroll doc-list__scroll-right"><i class="icn icn-Chevron-Right-Filled"></i></button>
-
-                    <div class="doc-list__thumbnails">
-                        ${invoicesTumbnails}
-                    </div>
+                        <button type="button" class="doc-list__scroll doc-list__scroll-left" onclick="thumbsScrollLeft(this);"><i class="icn icn-Chevron-Left-Filled"></i></button>
+                        <button type="button" class="doc-list__scroll doc-list__scroll-right" onclick="thumbsScrollRight(this);"><i class="icn icn-Chevron-Right-Filled"></i></button>
+                        <div class="doc-list__thumbnails">
+                            ${invoicesTumbnails}
+                        </div>
                     </div>
                     <div class="doc-preview">
-                    <div class="doc-preview__item">
-                        
-                        
-                    </div>
+                        <div class="doc-preview__item">
+                            
+                        </div>
                     </div>
                 </div>
-                </div>
-            `;
+                </div>`;
+
+            const addFilesArea = `
+                <div class="doc-accordion">
+                    <div class="doc-accordion__head defaultOpenDoc" id=${randomId}>
+                        <div class="doc-accordion__type">
+                            <i class="icn icn-Chevron-Right-Filled"></i>
+                            <span>${searchValue}</span>
+                        </div>
+                        <div class="doc-accordion__actions">
+                            <div class="doc-accordion__counter">${invoicesArr.length} files</div>
+                            <form action="" class="doc-add-form">
+                                <input type="file" name="doc-files" required="required" multiple="multiple"/>
+                                <button type="button" class="doc-accordion__add">Add File</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="doc-accordion__body">
+                        <div class="form-group doc-file-area">
+                            <form action="">
+                                <input type="file" name="doc-files" required="required" multiple="multiple"/>
+                            </form>
+                            <div class="doc-file__dummy">
+                                <div class="doc-file__success"><span></span> has been selected</div>
+                                <div class="doc-file__default">
+                                    <b>No files added.</b><br>
+                                    Drag & Drop any files right here or <br>
+                                    <span class="doc-file__highlighted">select it from your computer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
 
 
-            thumbnailsContainer.append(invoiceAccordion);
+            if (invoicesArr.length > 0) {
+                thumbnailsContainer.append(invoiceAccordion);
+            } else {
+                thumbnailsContainer.append(addFilesArea);
+            }
 
             openSidebar();
             setupAccordion([document.getElementById(randomId)]);
             showThumbPreview();
             chbxActions();
-            $('.doc-list__scroll-left').click(function() {
-                thumbsScrollLeft(this);
-            });
-            $('.doc-list__scroll-right').click(function() {
-                thumbsScrollRight(this);
-            });
-            
         });
     })();
 }
