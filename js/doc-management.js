@@ -15,9 +15,7 @@ function openSidebar() {
         maxWidth: 1000,
         handles: 'w',
         stop: function( event, ui ) {
-            // console.log(event, ui);
-            // documentsThumbsScroll();
-            // console.log('documentsThumbsScroll()');
+            scrollBtnsPreset();
         },
     });
 }
@@ -180,6 +178,25 @@ function thumbsScrollRight(btn) {
     else {
         animateScroll(step);
     }  
+}
+
+function scrollBtnsPreset() {
+    var $item = $('.doc-list__thumbnails');
+
+    $item.each(function() {
+        var $docList = $(this).parent('.doc-list'),
+            parentW = $docList.width(),
+            thumbsW = $(this).width();
+        
+        if (thumbsW <= parentW) {
+            $docList.find('.doc-list__scroll-left').hide();
+            $docList.find('.doc-list__scroll-right').hide();
+            $(this).animate({ 'left':'0' }, 400);
+        } else {
+            $docList.find('.doc-list__scroll-left').show();
+            $docList.find('.doc-list__scroll-right').show();
+        }
+    });
 }
 // end doc scroll buttons
 
@@ -455,6 +472,7 @@ function showInvoiceData(el) {
             }
 
             openSidebar();
+            scrollBtnsPreset();
             setupAccordion([document.getElementById(randomId)]);
             showThumbPreview();
             chbxActions();
