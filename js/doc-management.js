@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    // setupAccordion(document.getElementsByClassName("doc-accordion__head"));
     showThumbPreview();
 });
 
