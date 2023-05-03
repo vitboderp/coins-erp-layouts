@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 
 
-// DOC VIEW RESIZE (jQueryUI)
+// DOC VIEW RESIZE (jQueryUI needed)
 function openSidebar() {
     $('#browseContent').width('80%');
     $( "#DocViewResizable" ).show();
@@ -14,6 +14,7 @@ function openSidebar() {
         maxWidth: 1000,
         handles: 'w',
         stop: function( event, ui ) {
+            // show or hide thumbnails scrolling buttons
             scrollBtnsPreset();
         },
     });
@@ -23,7 +24,7 @@ function closeSidebar() {
     $('#browseContent').width('100%');
     $( "#DocViewResizable" ).hide();
 }
-// END DOC VIEW RESIZE (jQueryUI)
+// END DOC VIEW RESIZE (jQueryUI needed)
 
 
 // TABS
@@ -79,12 +80,20 @@ function updateMaxHeight(el, height) {
 
   
 // FILE INPUT
-$(document).ready(function(){
+function documentsInput() {
     $('input[name="doc-files"]').change(function(e){
-        var fileName = e.target.files[0].name;
-        $(".doc-file__success span").text(fileName);
+
+        var list = e.target.files;
+
+        if (list.length > 1) {
+            $(this).closest('.doc-file-area').find(".doc-file__success").text(list.length + ' files have been selected');
+        } else {
+            var fileName = e.target.files[0].name;
+            $(this).closest('.doc-file-area').find(".doc-file__success").text(fileName + ' has been selected');
+        }
+        
     });
-});
+}
 // END FILE INPUT
 
 
@@ -448,17 +457,18 @@ function showInvoiceData(el) {
                     </div>
                     <div class="doc-accordion__body">
                         <div class="form-group doc-file-area">
-                            <form action="">
+                            <form action="" class="doc-file-area-form">
                                 <input type="file" name="doc-files" required="required" multiple="multiple"/>
-                            </form>
-                            <div class="doc-file__dummy">
-                                <div class="doc-file__success"><span></span> has been selected</div>
-                                <div class="doc-file__default">
-                                    <b>No files added.</b><br>
-                                    Drag & Drop any files right here or <br>
-                                    <span class="doc-file__highlighted">select it from your computer</span>
+                            
+                                <div class="doc-file__dummy">
+                                    <div class="doc-file__success"></div>
+                                    <div class="doc-file__default">
+                                        <b>No files added.</b><br>
+                                        Drag & Drop any files right here or <br>
+                                        <span class="doc-file__highlighted">select it from your computer</span>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>`
@@ -475,6 +485,7 @@ function showInvoiceData(el) {
             setupAccordion([document.getElementById(randomId)]);
             showThumbPreview();
             chbxActions();
+            documentsInput();
         });
     })();
 }
