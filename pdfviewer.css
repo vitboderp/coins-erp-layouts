@@ -6,7 +6,7 @@
 }
 
 .doc-view {
-    background: #2a2a2a!important;
+    background: #4a4a4a!important;
     color: #fff!important;
     position: absolute;
     right: 0;
@@ -26,6 +26,7 @@
     align-items: center;
     flex-wrap: nowrap;
     justify-content: space-between;
+    background: #2a2a2a;
     border-bottom: 1px solid #4a4a4a;
     padding: 0 16px;
 }
@@ -68,7 +69,7 @@
 }
 
 .doc-view__drawer > .icn {
-    color: #4a4a4a;
+    color: #767676;
     font-size: 24px;
 }
 
@@ -84,7 +85,7 @@
 }
 
 .doc-view .cds-btn.is-active {
-    background: #4a4a4a;
+    background: rgba(66, 73, 88, 0.5);
 }
 
 .doc-view__expand {
@@ -152,16 +153,15 @@
   }
   .doc-accordion__head.is-active {
     border-color: transparent;
-    background: transparent;
   }
   .doc-accordion__head.is-active .doc-accordion__type .icn {
     transform: rotate(90deg);
   }
   .doc-accordion__body {
-    background-color: transparent;
+    background-color: #2a2a2a;
     max-height: 0;
     overflow: hidden;
-    padding: 0 12px;
+    padding: 0;
     transition: 0.3s;
   }
   .doc-accordion__body.is-active {
@@ -221,6 +221,7 @@
     width: 100%;
     height: 90px;
     position: relative;
+    padding: 0 12px;
 }
 .doc-file-area-form { 
     height: 100%;
@@ -295,6 +296,7 @@
     align-items: center;
     flex-wrap: nowrap;
     /* overflow: hidden; */
+    padding: 0 12px;
     position: relative;
 }
 .doc-list__thumb {
@@ -364,15 +366,14 @@
 .doc-list__thumb-checkbox input[type='checkbox'] {
     margin: 0;
     border: 1px solid #4A4A4A;
-
 }
 
 .doc-preview {
     margin-top: 4px;
+    padding: 4px;
 }
 .doc-preview__item {
     width: 100%;
-    /* aspect-ratio: 1 / 1.41; */
     max-height: 141%;
     overflow: auto;
 }

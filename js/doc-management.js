@@ -165,7 +165,7 @@ function thumbsScrollRight(btn) {
         thumbsW = $item.width(),
         offset = thumbsX-parentX;
 
-    var lastStep = thumbsW-parentW+offset;
+    var lastStep = thumbsW-parentW+offset+24;
 
     parentW = $('.doc-list').width(),
     thumbsW = $item.width();
