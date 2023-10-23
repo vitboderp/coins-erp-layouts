@@ -211,21 +211,34 @@ function scrollBtnsPreset() {
 
 // SHOW PREVIEW
 function showThumbPreview() {
-    $('.doc-list__thumb-img').click(function() {
-        $(this).closest('.doc-list__thumbnails').find('.doc-list__thumb-img').removeClass('is-selected');
-        $(this).addClass('is-selected');
+    function deselectOtherThumbnails() {
+        $('.doc-list__thumbnails .doc-list__thumb-img').removeClass('is-selected');
+    }
 
-        var dataUrl = $(this).attr('data-url'),
-            docBody = $(this).closest('.doc-accordion__body'),
-            preview = $(this).closest('.doc-accordion__body').find('.doc-preview__item'),
-            list = $(this).closest('.doc-accordion__body').find('.doc-list');
+    $('.doc-list__thumb-img').click(function () {
+        var $this = $(this);
+        var docBody = $this.closest('.doc-accordion__body');
+        var preview = docBody.find('.doc-preview__item');
+        var list = docBody.find('.doc-list');
+        var dataUrl = $this.attr('data-url');
 
-        preview.empty();
-        preview.append('<img src="'+dataUrl+'" alt="">');
+        if ($this.hasClass('is-selected')) {
+            $this.removeClass('is-selected');
+            preview.empty();
+            updateMaxHeight(docBody, list.height());
+        } else {
+            deselectOtherThumbnails();
+            $this.addClass('is-selected');
+            
+            var image = $('<img src="' + dataUrl + '" alt="">').on('load', function () {
+                updateMaxHeight(docBody, preview.height() + list.height());
+            });
 
-        updateMaxHeight(docBody, preview.height()+list.height());
+            preview.empty().append(image);
+        }
     });
 }
+
 // END SHOW PREVIEW
 
 
