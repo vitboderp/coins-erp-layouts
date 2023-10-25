@@ -211,33 +211,10 @@ function scrollBtnsPreset() {
 
 // SHOW PREVIEW
 function showThumbPreview() {
-    // $('.doc-list__thumb-img').click(function () {
-    //     var $this = $(this);
-    //     var docBody = $this.closest('.doc-accordion__body');
-    //     var preview = docBody.find('.doc-preview__item');
-    //     var list = docBody.find('.doc-list');
-    //     var dataUrl = $this.attr('data-url');
-
-    //     if ($this.hasClass('is-selected')) {
-    //         $this.removeClass('is-selected');
-    //         preview.empty();
-    //         updateMaxHeight(docBody, list.height());
-    //     } else {
-    //         console.log($this.nexAll());
-    //         $this.addClass('is-selected');
-            
-    //         var image = $('<img src="' + dataUrl + '" alt="">').on('load', function () {
-    //             updateMaxHeight(docBody, preview.height() + list.height());
-    //         });
-    //         preview.empty().append(image);
-    //     }
-    // });
-
-
     $('.doc-list__thumbnails').each(function() {
         const $group = $(this);
 
-        $group.find('.doc-list__thumb-img').click(function() {
+        $group.find('.doc-list__thumb-img').off('click').click(function() {
             var $this = $(this);
             var docBody = $this.closest('.doc-accordion__body');
             var preview = docBody.find('.doc-preview__item');
