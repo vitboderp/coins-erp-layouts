@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="mainarea"><head>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="js/doc-management.js"></script>
+
+
+  <script>
+
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/app.css">
+  <link id="CoinsStyle_coins" rel="stylesheet" type="text/css" href="coins1105src.css">
+  <link rel="STYLESHEET" type="text/css" href="coins/devstage/style/fontsv2.css">
+  <link id="CoinsStyle_coinsv2" rel="stylesheet" type="text/css" href="coinsv2css.css">
+
+  <link rel="stylesheet" type="text/css" href="pdfviewer.css">
+
+  
+  <div id="overlay"><table class="progress"><tbody><tr><td align="center" id="progressinfo"></td></tr><tr><td align="center" id="progresscount"></td></tr><tr><td align="center"><button class="buttonanchor text-image-button" onclick="cancelOverlay();return false;">Cancel</button></td></tr><tr><td><div class="progress"><div class="progressbar"></div></div></td></tr><tr><td align="center" id="progresstimer"></td></tr><tr><td align="center"><div id="animation"></div></td></tr></tbody></table></div><form name="thisForm" method="POST" target="postFrame" autocomplete="off">
+  <table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><table cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr><td>
+    <table id="headerTitle" class="headertitle window" width="100%">
+    <tbody><tr class="headertitle">
+    <td width="0" class="headertitle menu-control"><a class="banner-btn toggleMenuBtn is-active" id="toggleMenuBtn"><i class="icn icn-Chevron-Left-Filled"></i></a></td><td class="headertitle"><a id="desktop" href="wocoins.p?kco=20&amp;pvCILevel=2&amp;pvCISibling=80&amp;TopMenu=%2525WHOME" title="Toggle Desktop [CTRL+SHIFT+!]" class="banner-btn toggleDesktopBtn"><i class="icn icn-Dashboard"></i><div class="pill minframes notification-bullet" style="display:none"></div></a></td><td class="headertitle"><a class="buttonanchor image-button" id="productbtn" onclick="hCOINSMain.productPopupOver(this)" onmouseout="hCOINSMain.productPopupOut(this)">                     <span class="menu-control-logo">                      <img src="/coins/devstage/20230228063043/skin/v1105/images/favicon.png" id="button1" border="0">                    </span>                    <span class="menu-control-value">                      <span class="menu-control-title">Product</span>                      <span class="menu-control-text">ERP+</span>                    </span>                  </a></td>
+    <td class="headertitle page-title" width="100%">
+    <ul><li class="company-selector"><span class="text-description">Company</span><span><div class="styled-select"><select onchange="hCOINSMain.selectCompany(this, '20.08017.Y');" class="company" id="companySelector" name="companySelector" style="width: 151px;"><option value="0" title="000 - Country Codes">000 - Country Codes</option><option value="1" title="001 - CONTRACTOR MASTER">001 - CONTRACTOR MASTER</option><option value="3" title="003 - HOUSEBUILDER MASTER">003 - HOUSEBUILDER MASTER</option><option value="5" title="005 - Irish QA">005 - Irish QA</option><option value="6" title="006 - Sarmila's Company">006 - Sarmila's Company</option><option value="9" title="009 - Asset Management QA">009 - Asset Management QA</option><option value="10" title="010 - Contractors QA">010 - Contractors QA</option><option value="11" title="011 - Replication of Kco10 - ZK Plant">011 - Replication of Kco10 - ZK Plant</option><option value="12" title="012 - SureStart UK CATS">012 - SureStart UK CATS</option><option value="14" title="014 - Sygrabb copy config">014 - Sygrabb copy config</option><option value="15" title="015 - IFRS 16: Lease Accounting">015 - IFRS 16: Lease Accounting</option><option value="16" title="016 - Sergey's KCO with 13 GL PEriods">016 - Sergey's KCO with 13 GL PEriods</option><option value="18" title="018 - Maryams Company">018 - Maryams Company</option><option value="19" title="019 - Config partial">019 - Config partial</option><option value="20" selected="" title="020 - Housebuilders QA">020 - Housebuilders QA</option><option value="21" title="021 - UK testing on PR COINS + and OA">021 - UK testing on PR COINS + and OA</option><option value="22" title="022 - UK PDR legislation testing only">022 - UK PDR legislation testing only</option><option value="23" title="023 - UK Payroll Sacrifice">023 - UK Payroll Sacrifice</option><option value="24" title="024 - UK advancing tax year testing only">024 - UK advancing tax year testing only</option><option value="26" title="026 - Copy of KCO 20 as at 05/0319">026 - Copy of KCO 20 as at 05/0319</option><option value="27" title="027 - Financial Costing Functionality">027 - Financial Costing Functionality</option><option value="28" title="028 - For Marketplace testing Only">028 - For Marketplace testing Only</option><option value="29" title="029 - Multi Curr EUR base">029 - Multi Curr EUR base</option><option value="30" title="030 - Multi Curr USD base">030 - Multi Curr USD base</option><option value="31" title="031 - Set Currency query">031 - Set Currency query</option><option value="33" title="033 - Copy of 28 Marketplace testing only">033 - Copy of 28 Marketplace testing only</option><option value="35" title="035 - Pasha Inshaat">035 - Pasha Inshaat</option><option value="36" title="036 - Pasha Support Svs">036 - Pasha Support Svs</option><option value="37" title="037 - PDR 27414 - Copy of Kco 20">037 - PDR 27414 - Copy of Kco 20</option><option value="40" title="040 - Australian QA">040 - Australian QA</option><option value="41" title="041 - Australian QA Co 2">041 - Australian QA Co 2</option><option value="45" title="045 - New Dev Main 27344">045 - New Dev Main 27344</option><option value="46" title="046 - New Dev Main 27344a">046 - New Dev Main 27344a</option><option value="50" title="050 - US OA No longer connected to TI (107c2.cut db n1)">050 - US OA No longer connected to TI (107c2.cut db n1)</option><option value="51" title="051 - US-DO NOT USE">051 - US-DO NOT USE</option><option value="52" title="052 - US-DO NOT USE">052 - US-DO NOT USE</option><option value="54" title="054 - Canadian Payroll">054 - Canadian Payroll</option><option value="55" title="055 - Canadian kco copy from 54">055 - Canadian kco copy from 54</option><option value="57" title="057 - Canadian KCO config only">057 - Canadian KCO config only</option><option value="60" title="060 - Middle East Company">060 - Middle East Company</option><option value="61" title="061 - 11.11 - Middle East SM &amp;amp; VAT Testing ">061 - 11.11 - Middle East SM &amp; VAT Testing </option><option value="62" title="062 - Middle East">062 - Middle East</option><option value="70" title="070 - Mac-Mic">070 - Mac-Mic</option><option value="75" title="075 - CVR OA TESTING">075 - CVR OA TESTING</option><option value="76" title="076 - PDR 27344 Copy of KCO 10">076 - PDR 27344 Copy of KCO 10</option><option value="80" title="080 - US Primary Company">080 - US Primary Company</option><option value="81" title="081 - US-Intercompany Testing - Uses TS Input Groups">081 - US-Intercompany Testing - Uses TS Input Groups</option><option value="82" title="082 - US Company used for Unified Payroll Testing">082 - US Company used for Unified Payroll Testing</option><option value="85" title="085 - US 2 KCO">085 - US 2 KCO</option><option value="86" title="086 - Copy of KCO 80 as at 26/11/19">086 - Copy of KCO 80 as at 26/11/19</option><option value="87" title="087 - new kco">087 - new kco</option><option value="90" title="090 - Training Company">090 - Training Company</option><option value="91" title="091 - VAT Testing Co">091 - VAT Testing Co</option><option value="92" title="092 - Anups Test Kco">092 - Anups Test Kco</option><option value="100" title="100 - US Prime CATS">100 - US Prime CATS</option><option value="101" title="101 - Vinci Construction UK">101 - Vinci Construction UK</option><option value="102" title="102 - sygrabb test kco">102 - sygrabb test kco</option><option value="105" title="105 - Vinci Plant">105 - Vinci Plant</option><option value="106" title="106 - Gemma New Kco DO NOT DELETE">106 - Gemma New Kco DO NOT DELETE</option><option value="107" title="107 - Gemmas ONLY PDR 27344">107 - Gemmas ONLY PDR 27344</option><option value="111" title="111 - Vinci Sister Company Trading ">111 - Vinci Sister Company Trading </option><option value="200" title="200 - Kier Remote login">200 - Kier Remote login</option><option value="300" title="300 - Crowder-Murray QA">300 - Crowder-Murray QA</option><option value="305" title="305 - Pit 1 Revenue testing environment ">305 - Pit 1 Revenue testing environment </option><option value="310" title="310 - Pit 2 Revenue testing environment ">310 - Pit 2 Revenue testing environment </option><option value="315" title="315 - 10.25 - Zara - RCT">315 - 10.25 - Zara - RCT</option><option value="320" title="320 - 10.25 - Dave - RCT">320 - 10.25 - Dave - RCT</option><option value="330" title="330 - IRL PR Legislative Testing Only">330 - IRL PR Legislative Testing Only</option><option value="331" title="331 - EOY17 Irish payroll">331 - EOY17 Irish payroll</option><option value="332" title="332 - Ireland PR testing">332 - Ireland PR testing</option><option value="333" title="333 - Irish Test Illness">333 - Irish Test Illness</option><option value="334" title="334 - Guernsey Payroll">334 - Guernsey Payroll</option><option value="401" title="401 - Vinci IHP JV">401 - Vinci IHP JV</option><option value="402" title="402 - Jersey PR Legislation Testing Only">402 - Jersey PR Legislation Testing Only</option><option value="403" title="403 - UK Service Management">403 - UK Service Management</option><option value="404" title="404 - Plant Sure Start">404 - Plant Sure Start</option><option value="405" title="405 - Plant Best Practice (Support)">405 - Plant Best Practice (Support)</option><option value="406" title="406 - Sure Start Copy PDR27344">406 - Sure Start Copy PDR27344</option><option value="410" title="410 - PDR 22712(1)RTI EYU">410 - PDR 22712(1)RTI EYU</option><option value="420" title="420 - Shaylor Weekly Cost">420 - Shaylor Weekly Cost</option><option value="430" title="430 - Shaylor Mgt Services">430 - Shaylor Mgt Services</option><option value="500" title="500 - Dextrys">500 - Dextrys</option><option value="550" title="550 - CBC Testing ONLY">550 - CBC Testing ONLY</option><option value="600" title="600 - 10 SureStart UK">600 - 10 SureStart UK</option><option value="610" title="610 - ART KCO 10">610 - ART KCO 10</option><option value="620" title="620 - 40 AUS SureStart">620 - 40 AUS SureStart</option><option value="630" title="630 - MENA SureStart">630 - MENA SureStart</option><option value="640" title="640 - US SureStart">640 - US SureStart</option><option value="710" title="710 - ME Payroll P Ackers">710 - ME Payroll P Ackers</option><option value="900" title="900 - ** US CATS USE ONLY **">900 - ** US CATS USE ONLY **</option></select></div></span></li><li class="company-selector"><span class="text-description">Purchase Ledger</span><span><span class="text-title">Invoices<i id="plusversion"></i></span></span></li></ul>
+    <div class="search-wrapper"><div class="header-search"><i class="icn icn-Search" title="Search [CTRL+SHIFT-?]"></i><input type="search" id="headerSearch" name="search" placeholder="Search for anything within COINS..."></div></div>
+    </td>
+    <td id="bannerright"><div class="banner">
+      <div id="reports">
+      <a class="banner-btn" href="woframe.p?kco=20&amp;pvCILevel=2&amp;pvCISibling=80&amp;TopMenu=%2525WHOME&amp;MainArea=%25WSYBCRR" target="reportStatus" id="reportStatus" onclick="return hCOINSMain.clickTile(this);" data-apptype="frame" data-title="Report Status" data-menuitem="%WSYBCRR"><div style="position:relative; display:flex;"><i class="icn icn-Print"></i><div class="backgroundTasks notification-bullet" style="display:none">0</div><div class="unreadReports notification-bullet" style="display:none">0</div></div></a></div>
+      <div id="user-header"><div id="user-name"><div>Tim</div><div class="user-name-description">CARPENTER HELPER</div></div>
+      <div style="position:relative"><div id="user-avatar" class="accountimage"><span class="avatar"><div id="user-image" class="accountimage" style="background-image: url(wourun.p?program=sywraw&amp;filename=1tV0MtMA-f4XurFpSpyuQzI7O6P_XSjtlh_gor56At9dBkgBCS2Nj4MWp-O-ldHTQuMLg24&amp;cache=Y&amp;mod-date=020620&amp;mod-time=43756&amp;hash=KEbP192Vb0ChN4MXtH9lmdypYT7OSTcpT4moLrrmWh2DKWWtGlrxeU6Ai7KtHl8nWgWigKPp_kk_3NemxsL6Ag)"></div></span></div><div class="newTasks notification-bullet" style="display:none">0</div></div><div id="menu_closed"><i class="icn icn-Chevron-Down"></i></div></div>
+      <a href="https://ukazux01.coinscloud.com:4433/env/devstagews/woframe.p?kco=20&amp;pvCILevel=2&amp;pvCISibling=80&amp;TopMenu=%2525WHOME&amp;program=wou005&amp;MainArea=%25WPL5010BAIN&amp;selectRepCur=1&amp;info=cosval.PLOverdue&amp;docTable=ap_invoice&amp;pvFrame=W,2052,1088" id="desktopLogo">
+      <div id="logo"><img src="/coins/devstage/20230228063043/skin/v1105/images/logo_coins.svg"></div>
+      </a>
+      </div></td>
+    </tr></tbody></table>
+  
+  </td></tr>
+
+  <tr><td>
+    
+    <table width="100%" class="filled">
+      <td class="formbg" colspan="2">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tbody><tr><td class="contextdata">
+      <div class="drop-header" id="dropmenu"><div id="drop-navigator" style="display: none;"><button id="left" title="Scroll tabs left">&lt;</button><button id="right" title="Scrolll tabs right">&gt;</button></div><script nonce="">var menu = new Array();dropmenuhref="&kco=80&TopMenu=%25WHOME&pvCILevel=2&pvFrame=W%2C1602%2C1083&program=wou005&MainArea=%25WSE102200HSEI&menuType=dropdown&co_batchRowid=0x000000000177b500&se_invoiceRowid=0x0000000011a00985&hideViewAs=&viewAs=&initContainer=";menu[0] = new Array();menu[0][0]  = new Menu(false,"tab");menu[0][1] = new Item("Invoice Details","","",0,false,"","tab on");menu[0][2] = new Item("Detail Lines","wou005.p?hideViewAs=&viewAs=&initContainer=%WSE102210BSEN&se_invoiceRowid=0x0000000011a00985","",0,false,"");menu[0][3] = new Item("Comments","wou005.p?hideViewAs=&viewAs=&initContainer=%WSE102220BSCX&se_invoiceRowid=0x0000000011a00985&scx_rtype=seinvoice","",0,false,"");menu[0][4] = new Item("Documents","wou005.p?hideViewAs=&viewAs=&initContainer=%WSE102250BSED&se_invoiceRowid=0x0000000011a00985","",0,false,"");</script></div>  </td></tr>
+        <tr>
+          <td style="display: flex; position: relative;">
+        <div id="formbegin"></div><div id="formbegin"></div>
+        <div id="browseContent" class="formcontainer" style="width: 1593px; height: 876.203px; overflow: auto;"><table width="100%" cellspacing="0" cellpadding="0" class="detail"><tbody><tr><td valign="top" class="formblock"><table width="100%" class="detail layout"><tbody><tr><td class="formblank" width=" 33%"></td><td class="formblank" width=" 33%"></td></tr><tr id="rowADDRESS" class="layoutrow"><td class="formgrouplayb" id="layoutADDRESS" width="1%" valign="top" colspan="1" data-cellid="ADDRESS"><table width="100%"><tbody><tr><td class="layouttitle">&nbsp;</td></tr><tr><td class="layoutbody"><table width="100%" cellspacing="0" cellpadding="0" class=""><tbody><tr><td valign="top" class="formblock"><table width="100%" class=""><tbody><tr><td class="formlayoutblank" width=" 35%"></td><td class="formlayoutblank" width=" 35%"></td></tr><tr id="rowsei_name"><td align="right" class="formlabel" colspan="1">Invoice Name</td><td class="formdata" colspan="1" data-cellid="sei_name">Matt Bri Test Company</td></tr>
+      <tr id="rowsei_add__1"><td align="right" class="formlabel" colspan="1">Address</td><td class="formdata" colspan="1" data-cellid="sei_add__1">55 Spider-Man Blvd</td></tr>
+      <tr id="rowsei_add__2"><td align="right" class="formlabel" colspan="1">Address 2</td><td class="formdata" colspan="1" data-cellid="sei_add__2">&nbsp;</td></tr>
+      <tr id="rowsei_add__3"><td align="right" class="formlabel" colspan="1">City</td><td class="formdata" colspan="1" data-cellid="sei_add__3">Los Angelos</td></tr>
+      <tr id="rowsei_add__4"><td align="right" class="formlabel" colspan="1">State</td><td class="formdata" colspan="1" data-cellid="sei_add__4">CA</td></tr>
+      <tr id="rowsei_pcode"><td align="right" class="formlabel" colspan="1">Zip Code</td><td class="formdata" colspan="1" data-cellid="sei_pcode">90001</td></tr>
+      <tr id="rowsei_contact"><td align="right" class="formlabel" colspan="1">Contact</td><td class="formdata" colspan="1" data-cellid="sei_contact">&nbsp;</td></tr>
+      <tr><td class="formlayoutblank" width=" 35%"></td><td class="formlayoutblank" width=" 35%"></td></tr></tbody></table></td>
+    </tr></tbody></table></td></tr></tbody></table></td><td class="formgrouplayb" id="layoutINVDETAIL" width="1%" valign="top" colspan="1" data-cellid="INVDETAIL"><table width="100%"><tbody><tr><td class="layouttitle">&nbsp;</td></tr><tr><td class="layoutbody"><table width="100%" cellspacing="0" cellpadding="0" class=""><tbody><tr><td valign="top" class="formblock"><table width="100%" class=""><tbody><tr><td class="formlayoutblank" width=" 35%"></td><td class="formlayoutblank" width=" 35%"></td></tr><tr id="rowsei_idate">
+
+
+      <!-- <td><button onclick="showInvoiceData(this);" type="button">Open Invoice Details</button></td> -->
+      <td>
+        <a class="td" onclick="showInvoiceData(this, true);" href="#" title="Purchase Ledger Invoice Details">10010001</a>
+      </td>
+
+
+      <td align="right" class="formlabel" colspan="1">Invoice Date</td><td class="formdata" colspan="1" data-cellid="sei_idate">11/01/21</td></tr>
+      <tr id="rowsei_duedt"><td align="right" class="formlabel" colspan="1">Due Date</td><td class="formdata" colspan="1" data-cellid="sei_duedt">10/02/21<nobr></nobr></td></tr>
+      <tr id="rowsei_prefix"><td align="right" class="formlabel" colspan="1">Invoice Prefix</td><td class="formdata" colspan="1" data-cellid="sei_prefix">AC</td></tr>
+      <tr id="rowsei_invdelmeth"><td align="right" class="formlabel" colspan="1">
+        Invoice Delivery Method</td><td class="formdata" colspan="1" data-cellid="sei_invdelmeth"><nobr>E-Email</nobr></td></tr>
+      <tr id="rowsei_email"><td align="right" class="formlabel" colspan="1">Invoice Email</td><td class="formdata" colspan="1" data-cellid="sei_email">suzettemclane@gmail.com</td></tr>
+      <tr id="rowsei_form"><td align="right" class="formlabel" colspan="1">Invoice Form</td><td class="formdata" colspan="1" data-cellid="sei_form">%SEINV</td></tr>
+      <tr id="rowsei_po"><td align="right" class="formlabel" colspan="1">Customer Reference</td><td class="formdata" colspan="1" data-cellid="sei_po">234</td></tr>
+      <tr><td class="formlayoutblank" width=" 35%"></td><td class="formlayoutblank" width=" 35%"></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr>
+      <tr id="rowSTATUS" class="layoutrow"><td class="formgrouplayb" id="layoutSTATUS" width="1%" valign="top" colspan="1" data-cellid="STATUS"><table width="100%"><tbody><tr><td class="layouttitle">&nbsp;</td></tr><tr><td class="layoutbody"><table width="100%" cellspacing="0" cellpadding="0" class=""><tbody><tr><td valign="top" class="formblock"><table width="100%" class=""><tbody><tr><td class="formlayoutblank" width=" 35%"></td><td class="formlayoutblank" width=" 35%"></td></tr><tr id="rowsei_previewed"><td align="right" class="formlabel" colspan="1">Previewed</td><td class="formdata" colspan="1" data-cellid="sei_previewed"><img border="0" src="/coins/devstage/20231027115302/skin/v1105/images/notick.gif" alt="N"></td></tr>
+      <tr id="rowsei_approved"><td align="right" class="formlabel" colspan="1">Approved</td><td class="formdata" colspan="1" data-cellid="sei_approved"><img border="0" src="/coins/devstage/20231027115302/skin/v1105/images/notick.gif" alt="N"></td></tr>
+      <tr id="rowsei_printed"><td align="right" class="formlabel" colspan="1">Printed</td><td class="formdata" colspan="1" data-cellid="sei_printed"><img border="0" src="/coins/devstage/20231027115302/skin/v1105/images/tick.gif" alt="Y"></td></tr>
+      <tr id="rowsei_cancelled"><td align="right" class="formlabel" colspan="1">Cancelled</td><td class="formdata" colspan="1" data-cellid="sei_cancelled"><img border="0" src="/coins/devstage/20231027115302/skin/v1105/images/notick.gif" alt="N"></td></tr>
+      <tr id="rowsei_posted"><td align="right" class="formlabel" colspan="1">Posted</td><td class="formdata" colspan="1" data-cellid="sei_posted"><img border="0" src="/coins/devstage/20231027115302/skin/v1105/images/tick.gif" alt="Y"></td></tr>
+      <tr><td class="formlayoutblank" width=" 35%"></td><td class="formlayoutblank" width=" 35%"></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td><td class="formgrouplayb" id="layoutAMOUNTS" width="1%" valign="top" colspan="1" data-cellid="AMOUNTS"><table width="100%"><tbody><tr><td class="layouttitle">&nbsp;</td></tr><tr><td class="layoutbody"><table width="100%" cellspacing="0" cellpadding="0" class=""><tbody><tr><td valign="top" class="formblock"><table width="100%" class=""><tbody><tr><td class="formlayoutblank" width=" 23%"></td><td class="formlayoutblank" width=" 23%"></td><td class="formlayoutblank" width=" 23%"></td></tr><tr id="rowsei_subtotal"><td align="right" class="formlabel" colspan="2">
+        Subtotal</td><td class="formdata" colspan="1" align="Right" data-cellid="sei_subtotal"><nobr>83.33</nobr></td><td class="formdata" colspan="1">&nbsp;</td></tr>
+      <tr id="rowsei_discamt"><td align="right" class="formlabel" colspan="2">Discount/Adjustment</td><td class="formdata" colspan="1" align="Right" data-cellid="sei_discamt"><nobr>0.00</nobr></td><td class="formdata" colspan="1">&nbsp;</td></tr>
+      <tr id="rowsei_ret"><td align="right" class="formlabel" colspan="2">Retention</td><td class="formdata" colspan="1" align="Right" data-cellid="sei_ret"><nobr>0.00</nobr></td><td class="formdata" colspan="1">&nbsp;</td></tr>
+      <tr id="rowsei_vat"><td align="right" class="formlabel" colspan="2">Tax</td><td class="formdata" colspan="1" align="Right" data-cellid="sei_vat"><nobr>12.50</nobr></td><td class="formdata" colspan="1">&nbsp;</td></tr>
+      <tr id="rowsei_total"><td align="right" class="formlabel" colspan="2">Total</td><td class="formdata" colspan="1" align="Right" data-cellid="sei_total"><nobr>95.83</nobr></td><td class="formdata" colspan="1">&nbsp;</td></tr>
+      <tr id="rowsei_tender"><td align="right" class="formlabel" colspan="2">On-Site Payments</td><td class="formdata" colspan="1" align="Right" data-cellid="sei_tender"><nobr>0.00</nobr></td><td class="formdata" colspan="1">&nbsp;</td></tr>
+      <tr><td class="formlayoutblank" width=" 23%"></td><td class="formlayoutblank" width=" 23%"></td><td class="formlayoutblank" width=" 23%"></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr>
+      </tbody></table></td></tr></tbody></table></div>
+
+
+
+<!-- PDF VIEWER RESIZABLE  -->
+<div id="DocViewResizable" class="doc-view" style="width: 20%; display: none;">
+  <div class="doc-view__header">
+    <div class="cds-tabs">
+      <button class="cds-btn cds-tabs__btn is-active" onclick="openTab(event, 'invoicesTab')" id="defaultTab">Invoices</button>
+      <button class="cds-btn cds-tabs__btn" onclick="openTab(event, 'relatedTab')">Related</button>
+    </div>
+    <div class="doc-view__actions">
+      <a href="#" class="doc-view__expand">Expand</a>
+      <button class="doc-view__close" onclick="closeSidebar();"><i class="icn icn-Close-Filled"></i></button>
+    </div>
+  </div>
+  <div class="doc-view__resizer">
+    <div class="doc-view__drawer"><i class="icn icn-Drag-Indicator-Filled"></i></div>
+  </div>
+  <div class="doc-view__body" id="documentsContainer">
+
+    <div class="doc-actions" id="documentActions" style="display: none;">
+      <div class="doc-actions__counter">
+        <button type="button" class="doc-uncheck-btn" id="uncheckAllDocs"><i class="icn icn-Reject-Filled"></i></button>
+        <span id="checkedDocumentsCounter"></span>
+      </div>
+      <div class="doc-actions__buttons">
+        <button type="button" class="doc-actions__btn" id="downloadDocs" onclick="downloadSelectedDocs();"><i class="icn icn-Download"></i></button>
+        <button type="button" class="doc-actions__btn" id="emailDocs" onclick="emailSelectedDocs();"><i class="icn icn-Email-Filled"></i></button>
+        <button type="button" class="doc-actions__btn" id="printDocs" onclick="printSelectedDocs();"><i class="icn icn-Print-Filled"></i></button>
+      </div>
+    </div>
+
+
+
+    <div class="cds-tabcontent" id="invoicesTab">
+
+      <!-- <div class="doc-accordion">
+        <div class="doc-accordion__head defaultOpenDoc">
+          <div class="doc-accordion__type">
+            <i class="icn icn-Chevron-Right-Filled"></i>
+            <span>21080029</span>
+          </div>
+          <div class="doc-accordion__actions">
+            <div class="doc-accordion__counter">5 files</div>
+            <form action="" class="doc-add-form">
+              <input type="file" name="doc-files" required="required" multiple="multiple"/>
+              <button type="button" class="doc-accordion__add">Add File</button>
+            </form>
+          </div>
+        </div>
+        <div class="doc-accordion__body">
+          <div class="doc-list">
+            <button type="button" class="doc-list__scroll doc-list__scroll-left"><i class="icn icn-Chevron-Left-Filled"></i></button>
+            <button type="button" class="doc-list__scroll doc-list__scroll-right"><i class="icn icn-Chevron-Right-Filled"></i></button>
+
+            <div class="doc-list__thumbnails">
+              <div class="doc-list__thumb">
+                <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
+                <div class="doc-list__thumb-img" style="background-image: url('https://img.freepik.com/free-vector/gradient-luxury-law-firm-letterhead_23-2149336490.jpg?w=2000');" data-url="https://img.freepik.com/free-vector/gradient-luxury-law-firm-letterhead_23-2149336490.jpg?w=2000"></div>
+                <div class="doc-list__thumb-name">23-10-22_long_name_item.jpg</div>
+              </div>
+              <div class="doc-list__thumb">
+                <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
+                <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
+                <div class="doc-list__thumb-name">home.jpg</div>
+              </div>
+              <div class="doc-list__thumb">
+                <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
+                <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
+                <div class="doc-list__thumb-name">specification.pdf</div>
+              </div>
+              <div class="doc-list__thumb">
+                <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
+                <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
+                <div class="doc-list__thumb-name">23-10-22.jpg</div>
+              </div>
+              <div class="doc-list__thumb">
+                <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
+                <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
+                <div class="doc-list__thumb-name">23-10-22.jpg</div>
+              </div>
+              <div class="doc-list__thumb">
+                <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
+                <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
+                <div class="doc-list__thumb-name">home.jpg</div>
+              </div>
+              <div class="doc-list__thumb">
+                <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
+                <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
+                <div class="doc-list__thumb-name">specification.pdf</div>
+              </div>
+              <div class="doc-list__thumb">
+                <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
+                <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
+                <div class="doc-list__thumb-name">23-10-22.jpg</div>
+              </div>
+              <div class="doc-list__thumb">
+                <div class="doc-list__thumb-checkbox"><input type="checkbox" name="thumb_selector" class="doc-list__checkbox"></div>
+                <div class="doc-list__thumb-img" style="background-image: url('./doc-view-files/p4.png');"></div>
+                <div class="doc-list__thumb-name">23-10-22.jpg</div>
+              </div>
+            </div>
+          </div>
+          <div class="doc-preview">
+            <div class="doc-preview__item">
+              <img src="./doc-view-files/p4.png" alt="">
+              <div>
+                <object data="./doc-view-files/Mixed Conditionals + Rules.pdf#toolbar=0" type="application/pdf" width="100%" height="500"></object>
+                <iframe src="./doc-view-files/Mixed Conditionals + Rules.pdf" style="width:100%;height:700px;"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+
+
+    <div class="cds-tabcontent" id="relatedTab" style="display: none;">
+      <div class="doc-accordion">
+        <div class="doc-accordion__head">
+          <div class="doc-accordion__type">
+            <i class="icn icn-Chevron-Right-Filled"></i>
+            <span>PO’s</span>
+          </div>
+          <div class="doc-accordion__actions">
+            <div class="doc-accordion__counter">1 file</div>
+            <button type="button" class="doc-accordion__add">Add File</button>
+          </div>
+        </div>
+        <div class="doc-accordion__body">
+          body tab PO’s <br>
+        </div>
+      </div>
+      <div class="doc-accordion">
+        <div class="doc-accordion__head ">
+          <div class="doc-accordion__type">
+            <i class="icn icn-Chevron-Right-Filled"></i>
+            <span>GRN’s</span>
+          </div>
+          <div class="doc-accordion__actions">
+            <div class="doc-accordion__counter">1 file</div>
+            <button type="button" class="doc-accordion__add">Add File</button>
+          </div>
+        </div>
+        <div class="doc-accordion__body">
+          <!-- File input area  -->
+          <div class="form-group doc-file-area">
+            <form action="">
+              <input type="file" name="doc-files" required="required" multiple="multiple"/>
+            </form>
+            <div class="doc-file__dummy">
+              <div class="doc-file__success"><span></span> has been selected</div>
+              <div class="doc-file__default">
+                <b>No files added.</b><br>
+                Drag & Drop any files right here or <br>
+                <span class="doc-file__highlighted">select it from your computer</span>
+              </div>
+            </div>
+          </div>
+          <!-- END File input area  -->
+        </div>
+      </div>
+      <div class="doc-accordion">
+        <div class="doc-accordion__head">
+          <div class="doc-accordion__type">
+            <i class="icn icn-Chevron-Right-Filled"></i>
+            <span>Doctype 2</span>
+          </div>
+          <div class="doc-accordion__actions">
+            <div class="doc-accordion__counter">1 file</div>
+            <button type="button" class="doc-accordion__add">Add File</button>
+          </div>
+        </div>
+        <div class="doc-accordion__body">
+          body tab Doctype 2
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END OF PDF VIEWER RESIZABLE  -->
+
+
+        </td></tr></tbody></table>
+
+
+
+
+
+
+
+
+        </td>
+    </td></tr>
+
+
+
+
+    <!-- FOOTER -->
+    <tr class="footerrow" id="footerrow"><td class="buttonbar" colspan="2"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td class="buttonbar" valign="middle">
+    <div class="buttongroup">
+    <button class="buttonanchor image-button" id="first" onclick="actionPage(this);return false" href="first" title="First"><img src="/coins/devstage/20230228063043/skin/v1105/images/first_i.svg" id="button72" class="button" border="0"></button>
+    <button class="buttonanchor image-button" id="prev" onclick="actionPage(this);return false" href="prev" title="Previous"><img src="/coins/devstage/20230228063043/skin/v1105/images/prev_i.svg" id="button73" class="button" border="0"></button>
+    <button class="buttonanchor image-button" id="next" onclick="actionPage(this);return false" href="next" title="Next"><img src="/coins/devstage/20230228063043/skin/v1105/images/next.svg" id="button74" class="button" border="0"></button>
+    <button class="buttonanchor image-button" id="last" onclick="actionPage(this);return false" href="last" title="Last"><img src="/coins/devstage/20230228063043/skin/v1105/images/last.svg" id="button75" class="button" border="0"></button>
+    </div>
+    <img src="/coins/devstage/20230228063043/skin/v1105/images/sep.gif"><button class="buttonanchor text-image-button image-only" href="export" title="Export" id="export" onclick="actionPage(this);return false"><img src="/coins/devstage/20230228063043/skin/v1105/images/export.svg" id="button76" class="button" border="0"></button>
+    <button class="buttonanchor text-image-button image-only" href="print" title="Print" id="print" onclick="actionPage(this);return false"><img src="/coins/devstage/20230228063043/skin/v1105/images/print.svg" id="button77" class="button" border="0"></button>
+    <button class="buttonanchor text-image-button" href="all" title="Show All" id="showAll" onclick="selectedAll();return false;"><img src="/coins/devstage/20230228063043/skin/v1105/images/all.svg" id="button78" class="button" border="0">Show All</button>
+    <button class="buttonanchor text-image-button image-only" href="total" title="Total" id="total" onclick="selectedSum();return false;"><img src="/coins/devstage/20230228063043/skin/v1105/images/total.svg" id="button79" class="button" border="0"></button>
+    <img src="/coins/devstage/20230228063043/skin/v1105/images/sep.gif"><button class="buttonanchor text-image-button" href="detail" title="Detail" id="action:detail::load" onclick="actionRow(this);return false"><img src="/coins/devstage/20230228063043/skin/v1105/images/detail.svg" id="button80" class="button" border="0">Detail</button>
+    <img src="/coins/devstage/20230228063043/skin/v1105/images/sep.gif"><button class="buttonanchor text-image-button image-only" href="reload" title="Refresh [CTRL+SHIFT+R]" id="reload" onclick="actionPage(this);return false"><img src="/coins/devstage/20230228063043/skin/v1105/images/reload.svg" id="button81" class="button" border="0"></button>
+    <div class="actiongroup">
+    <div class="styled-select"><select name="selectAction" id="selectAction" disabled="">
+    <option value="post:%WDM1000XXX:">Email Documents</option>
+    </select></div>
+    <button class="buttonanchor image-button" id="actiongo" onclick="setSaveButton(this,'actiongo_i.gif');selectNextAction(thisForm.selectAction);return false" href="actiongo" title="Apply Action"><img src="/coins/devstage/20230228063043/skin/v1105/images/actiongo.svg" id="button82" class="button" border="0"></button>
+    </div>
+    </td>
+    <td align="right" class="buttonbar">
+    </td>
+    </tr></tbody></table></td></tr>
+    <input type="hidden" name="cQueryFilterType" id="cQueryFilterType" value="Simple">
+    <tr class="footerrow"><td class="filterbar"><table width="100%" cellpadding="0" cellspacing="0">
+    <tbody><tr><td class="buttonbar" align="left" valign="middle" width="1">
+    <button class="buttonanchor text-image-button" href="afilter" title="Advanced Filter" id="queryFilterType" onclick="openFilter(true);actionThis(this);return false;" value="advanced"><img src="/coins/devstage/20230228063043/skin/v1105/images/afilter.svg" id="button83" class="button" border="0">Advanced</button>
+    </td><td class="buttonbar" align="right" valign="middle" width="1">
+    </td><td class="buttonbar" align="right" valign="middle" width="1">
+    <button class="buttonanchor image-button" id="filterSave" onclick="openBrowseFilter();return false;" href="formsave" title="Save Filter"><img src="/coins/devstage/20230228063043/skin/v1105/images/formsave.svg" id="button84" class="button" border="0"></button>
+    
+    </td><td class="buttonbar" align="right" valign="middle" width="100%">
+    <input type="hidden" name="cNamedFilter" id="cNamedFilter" value="All">
+    <span class="filterlabel">Filter</span>&nbsp;
+    <div class="styled-select"><select id="namedFilter">
+    <option value="All" selected="">All</option>
+    <option value="Paid">Paid</option>
+    <option value="Open">Open</option>
+    <option value="Registered">Registered</option>
+    <option value="Approved">Approved</option>
+    <option value="Held">Held</option>
+    <option value="Posted">Posted</option>
+    <option value="Unposted">Unposted</option>
+    <option value="Cancelled">Cancelled</option>
+    <option value="Overdue">Overdue</option>
+    <option value="PCardInvoices">PCard Invoices</option>
+    <option value="eCommerceInvoices">eCommerce Invoices</option>
+    <option value="BadDebt">Bad Debt</option>
+    <option value="ProformaInvoices">Proforma Invoices</option>
+    </select></div>
+    <span class="filterlabel">Search</span>&nbsp;
+    <div class="styled-select"><select type="text" id="queryColumnField"><option value="avm_num">Supplier Account</option><option value="ohd_num">PO Number</option><option value="job_num">Contract</option><option value="pov_code">Overhead Department</option><option value="gan_code">Sector</option><option value="ain_hcode">Commercial Hold Code</option><option value="ain_hcode2">Financial Hold Code</option><option value="ain_inv">Internal Reference</option><option value="ain_supref">Supplier Reference</option><option value="coj_type">Transaction Type</option><option value="avm_name">Supplier Name</option><option value="ain_anal">Analysis</option><option value="ain_idate">Invoice Date</option></select></div>
+    <input type="text" id="queryColumnFilter" size="25" value="" onfocus="hThisField=this">
+    </td>
+    </tr></tbody></table></td>
+    <td rowspan="4" width="1%" class="button_n" onmouseover="this.className='button_h'" onmousedown="this.className='button_d'" onmouseout="this.className='button_n'" title="Apply Filter [CTRL+SHIFT+A]" id="applyFilter" value="" onclick="searchButton();return false;"><img src="/coins/devstage/20230228063043/skin/v1105/images/filter.svg"></td>
+    </tr>
+    <tr class="footerrow"><td class="filter">
+  <table width="100%" cellspacing="0" cellpadding="0" class="bodysel"><tbody><tr><td valign="top" class="formselectionblock"><table width="100%" class="bodysel"><tbody><tr><td class="formselectionblank" width="30%"></td><td class="formselectionblank" width="70%"></td></tr><tr id="rowRepCur"><td align="right" class="formselectionlabel">Show amounts in</td><td class="formselectiondata"><div class="styled-select"><select class="selectioninput" name="selectRepCur" id="selectRepCur" style="width: 244px;"><option value="1" selected="">Invoice Currency</option><option value="6">Supplier Currency</option><option value="2">GBP - Base Currency</option></select></div></td></tr>
+  <tr><td class="formselectionblank" width="30%"></td><td class="formselectionblank" width="70%"></td></tr></tbody></table></td></tr></tbody></table>  </td>
+    </tr>
+    </tbody></table>
+    </td></tr>
+    </tbody></table>
+    </td></tr>
+    </tbody></table> <!--- background filled ---->
+  
+  
+  
+  <input type="hidden" name="confirmWarning" value="">
+  <input type="hidden" name="editorFields" id="editorFields" value="">
+  <input type="hidden" name="clobFields" id="clobFields" value="">
+  </form>
+  
+  <div id="CalendarControlWrapper" style="display:block;width:0px;position:relative"><div id="CalendarControl" style="z-index:9999"></div></div>
+
+  <div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+  <div tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-dialog-buttons ui-draggable ui-resizable" aria-describedby="filterForm" style="display: none; position: absolute;" aria-labelledby="ui-id-1"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle" title="Filters"><span id="ui-id-1" class="ui-dialog-title">Filters</span><div class="ui-dialog-titlebar-buttonpane" style="position: absolute; top: 40%; right: 1em; margin-top: -10px; background-color: rgb(74, 74, 74);" title=""><button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close ui-state-default" title="Close" style="position: relative; float: right; top: auto; right: auto; margin: 0px;"><span class="ui-button-icon ui-icon ui-icon-close" style="background-image: url(&quot;wousvg.p?style=v1105&amp;icon=close_popup$.svg&amp;colour=%23ffffff&quot;); background-position: 0px center;"></span><span class="ui-button-icon-space"> </span>Close</button><a class="ui-dialog-titlebar-restore ui-corner-all ui-state-default" href="#" role="button" title="Restore" style="display: none;"><span class="ui-icon ui-icon-newwin" title="Restore">restore</span></a><a class="ui-dialog-titlebar-collapse ui-corner-all ui-state-default" href="#" title="collapse" role="button" style="display: none;"><span class="ui-icon ui-icon-triangle-1-s">collapse</span></a><a class="ui-dialog-titlebar-maximize ui-corner-all ui-state-default" href="#" title="Maximise" role="button" style="display: none;"><span class="ui-icon ui-icon-extlink">maximize</span></a><a class="ui-dialog-titlebar-minimize ui-corner-all ui-state-default" href="#" title="Minimise" role="button" style="display: none;"><span class="ui-icon ui-icon-minus">minimize</span></a></div></div><div id="filterForm" style="" class="ui-dialog-content ui-widget-content ui-dialog-normal">
+    <div class="styled-select"><select data-minwidth="266" data-maxwidth="266" onfocus="hThisField=this" data-inputseq="2001" id="filterNameSelect" onchange="filterNameChange();" style="width: 266px;"><option value="">Create New Filter</option>
+    </select>
+    </div><br><br>
+    <label for="filterName">Filter Name</label>
+    <input type="text" id="filterName" style="width:260px" data-inputseq="2002" onfocus="hThisField=this" value="">
+    <div id="filterControls"><br>
+    <input type="checkbox" id="globalFilter">
+    <label for="globalFilter">Global (accessible to all users)</label>
+    <br>
+    <input type="checkbox" id="kcoSpecificFilter">
+    <label for="kcoSpecificFilter">Company-specific</label>
+    </div>
+</html>

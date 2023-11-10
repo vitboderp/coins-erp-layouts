@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<SCRIPT nonce="ZxbjPgaj4wJIr+D7BZ+ruO73JGM1wkFZjCsQ+aT6EfA=">
+cWebBase="devstage";
+cWebImgs="devstage";
+cWebStyle="devstage";
+cStyleVar="v1105";
+cUI="v1202";
+cUIMode="";
+b1202=true;
+bNewUI=true;
+oPalette={theme:"#4a4a4a",light:"#4a4a4a",lighter:"rgba(66,73,88,0.1)",text:"#ffffff",button:"#2a2a2a",normal:"#2a2a2a",backgroundnormal:"#ffffff",backgroundaccent:"#4a4a4a",backgroundhighlight:"rgba(66,73,88,0.1)",backgroundemphasise1:"rgba(42,42,42,0.06)",backgroundemphasise2:"rgba(42,42,42,0.12)",backgroundemphasise3:"rgba(42,42,42,0.18)",backgroundalert:"#e54d42",backgroundwarning:"#fbac09",backgroundsuccess:"#40b915",separator:"rgba(0,0,0,0.1)",textnormal:"#2a2a2a",textaccent:"#ffffff",textmuted:"#767676",texterror:"#ed0034",textwarning:"#b26200",textsuccess:"#368700",textanchor:"#2a2a2a",textbackgroundalert:"#ffffff",textbackgroundwarning:"#ffffff",textbackgroundsuccess:"#ffffff"}
+cUID="";
+bEnableDragDrop=true;
+/*-
+     Program: coinsmain.js
+ Description: Main Frame Scripts
+-*/
+hCOINSMain=window;
+while (hCOINSMain.COINSMainFrame!=true&&hCOINSMain!=top) {
+  hCOINSMain=hCOINSMain.parent;
+}
+</SCRIPT>
+<HTML><SCRIPT nonce="ZxbjPgaj4wJIr+D7BZ+ruO73JGM1wkFZjCsQ+aT6EfA=">bDesktopFrame=false;</SCRIPT><script src="/coins/devstage/scripts/keepalive.js" nonce="ZxbjPgaj4wJIr+D7BZ+ruO73JGM1wkFZjCsQ+aT6EfA="></script></HTML>
+<SCRIPT nonce="ZxbjPgaj4wJIr+D7BZ+ruO73JGM1wkFZjCsQ+aT6EfA=">
+cWebBase="devstage";
+cWebImgs="devstage";
+cWebStyle="devstage";
+cStyleVar="v1105";
+cUI="v1202";
+cUIMode="";
+b1202=true;
+bNewUI=true;
+oPalette={theme:"#4a4a4a",light:"#4a4a4a",lighter:"rgba(66,73,88,0.1)",text:"#ffffff",button:"#2a2a2a",normal:"#2a2a2a",backgroundnormal:"#ffffff",backgroundaccent:"#4a4a4a",backgroundhighlight:"rgba(66,73,88,0.1)",backgroundemphasise1:"rgba(42,42,42,0.06)",backgroundemphasise2:"rgba(42,42,42,0.12)",backgroundemphasise3:"rgba(42,42,42,0.18)",backgroundalert:"#e54d42",backgroundwarning:"#fbac09",backgroundsuccess:"#40b915",separator:"rgba(0,0,0,0.1)",textnormal:"#2a2a2a",textaccent:"#ffffff",textmuted:"#767676",texterror:"#ed0034",textwarning:"#b26200",textsuccess:"#368700",textanchor:"#2a2a2a",textbackgroundalert:"#ffffff",textbackgroundwarning:"#ffffff",textbackgroundsuccess:"#ffffff"}
+cUID="";
+bEnableDragDrop=true;
+/*-
+     Program: coinsmain.js
+ Description: Main Frame Scripts
+-*/
+hCOINSMain=window;
+while (hCOINSMain.COINSMainFrame!=true&&hCOINSMain!=top) {
+  hCOINSMain=hCOINSMain.parent;
+}
+</SCRIPT>
+<script src="/coins/devstage/scripts/keepalive.js"></script>

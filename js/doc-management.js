@@ -365,7 +365,7 @@ function generateRandomId(length) {
 
 
 // SHOW INVOICE DATA
-function showInvoiceData(el) {
+function showInvoiceData(el, singleItem) {
     event.preventDefault();
     
     (function() {
@@ -454,6 +454,29 @@ function showInvoiceData(el) {
                 </div>
                 </div>`;
 
+            const invoiceAccordionSingle = `
+                <div class="doc-accordion">
+                <div class="doc-accordion__head defaultOpenDoc doc-accordion__head--single" id=${randomId}>
+                    <div class="doc-accordion__type">
+                        <span>${searchValue}</span>
+                    </div>
+                </div>
+                <div class="doc-accordion__body">
+                    <div class="doc-list">
+                        <button type="button" class="doc-list__scroll doc-list__scroll-left" onclick="thumbsScrollLeft(this);"><i class="icn icn-Chevron-Left-Filled"></i></button>
+                        <button type="button" class="doc-list__scroll doc-list__scroll-right" onclick="thumbsScrollRight(this);"><i class="icn icn-Chevron-Right-Filled"></i></button>
+                        <div class="doc-list__thumbnails">
+                            ${invoicesTumbnails}
+                        </div>
+                    </div>
+                    <div class="doc-preview">
+                        <div class="doc-preview__item">
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>`;
+
             const addFilesArea = `
                 <div class="doc-accordion">
                     <div class="doc-accordion__head defaultOpenDoc" id=${randomId}>
@@ -489,7 +512,14 @@ function showInvoiceData(el) {
 
 
             if (invoicesArr.length > 0) {
-                thumbnailsContainer.append(invoiceAccordion);
+                // thumbnailsContainer.append(invoiceAccordion);
+                if (singleItem) {
+                    thumbnailsContainer.append(invoiceAccordionSingle);
+                } else {
+                    thumbnailsContainer.append(invoiceAccordion);
+                }
+
+
             } else {
                 thumbnailsContainer.append(addFilesArea);
             }
