@@ -23,6 +23,7 @@ function openSidebar() {
 function closeSidebar() {
     $('#browseContent').width('100%');
     $( "#DocViewResizable" ).hide();
+    $('#invoicesTab').empty();
 }
 // END DOC VIEW RESIZE (jQueryUI needed)
 
@@ -424,7 +425,7 @@ function showInvoiceData(el, singleItem) {
             const randomId = generateRandomId(8);
 
             const invoiceAccordion = `
-                <div class="doc-accordion">
+                <div class="doc-accordion" data-invoice="${searchValue}">
                 <div class="doc-accordion__head defaultOpenDoc" id=${randomId}>
                     <div class="doc-accordion__type">
                         <i class="icn icn-Chevron-Right-Filled"></i>
@@ -455,7 +456,7 @@ function showInvoiceData(el, singleItem) {
                 </div>`;
 
             const invoiceAccordionSingle = `
-                <div class="doc-accordion">
+                <div class="doc-accordion" data-invoice="${searchValue}">
                 <div class="doc-accordion__head defaultOpenDoc doc-accordion__head--single" id=${randomId}>
                     <div class="doc-accordion__type">
                         <span>${searchValue}</span>
@@ -478,7 +479,7 @@ function showInvoiceData(el, singleItem) {
                 </div>`;
 
             const addFilesArea = `
-                <div class="doc-accordion">
+                <div class="doc-accordion" data-invoice="${searchValue}">
                     <div class="doc-accordion__head defaultOpenDoc" id=${randomId}>
                         <div class="doc-accordion__type">
                             <i class="icn icn-Chevron-Right-Filled"></i>
@@ -511,17 +512,29 @@ function showInvoiceData(el, singleItem) {
                 </div>`
 
 
+            var invoiceExists = $('[data-invoice='+searchValue+']');
+        
             if (invoicesArr.length > 0) {
                 // thumbnailsContainer.append(invoiceAccordion);
-                if (singleItem) {
-                    thumbnailsContainer.append(invoiceAccordionSingle);
+                if (invoiceExists.length > 0) {
+                    console.log('Already added');
+                    return;
                 } else {
-                    thumbnailsContainer.append(invoiceAccordion);
+                    if (singleItem) {
+                        thumbnailsContainer.append(invoiceAccordionSingle);
+                    } else {
+                        thumbnailsContainer.append(invoiceAccordion);
+                    }
                 }
 
-
             } else {
-                thumbnailsContainer.append(addFilesArea);
+                if (invoiceExists.length > 0) {
+                    console.log('Already added');
+                    return;
+                } else {
+                    thumbnailsContainer.append(addFilesArea);
+                }
+                
             }
 
             openSidebar();
