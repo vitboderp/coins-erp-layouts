@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="mainarea"><head>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="js/doc-management.js"></script>
+
+
+  <script>
+
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <link id="CoinsStyle_coins" rel="stylesheet" type="text/css" href="coins1105src.css">
+  <link rel="STYLESHEET" type="text/css" href="coins/devstage/style/fontsv2.css">
+  <link id="CoinsStyle_coinsv2" rel="stylesheet" type="text/css" href="coinsv2css.css">
+  
+  <link rel="stylesheet" href="css/app.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/creating-desktops.css">
+
+  
+  <div id="overlay"><table class="progress"><tbody><tr><td align="center" id="progressinfo"></td></tr><tr><td align="center" id="progresscount"></td></tr><tr><td align="center"><button class="buttonanchor text-image-button" onclick="cancelOverlay();return false;">Cancel</button></td></tr><tr><td><div class="progress"><div class="progressbar"></div></div></td></tr><tr><td align="center" id="progresstimer"></td></tr><tr><td align="center"><div id="animation"></div></td></tr></tbody></table></div><form name="thisForm" method="POST" target="postFrame" autocomplete="off">
+  <table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+    <table cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr><td>
+    <table id="headerTitle" class="headertitle window" width="100%">
+    <tbody><tr class="headertitle">
+    <td width="0" class="headertitle menu-control"><a class="banner-btn toggleMenuBtn is-active" id="toggleMenuBtn"><i class="icn icn-Chevron-Left-Filled"></i></a></td><td class="headertitle"><a id="desktop" href="wocoins.p?kco=20&amp;pvCILevel=2&amp;pvCISibling=80&amp;TopMenu=%2525WHOME" title="Toggle Desktop [CTRL+SHIFT+!]" class="banner-btn toggleDesktopBtn"><i class="icn icn-Dashboard"></i><div class="pill minframes notification-bullet" style="display:none"></div></a></td><td class="headertitle"><a class="buttonanchor image-button" id="productbtn" onclick="hCOINSMain.productPopupOver(this)" onmouseout="hCOINSMain.productPopupOut(this)">                     <span class="menu-control-logo">                      <img src="/coins/devstage/20230228063043/skin/v1105/images/favicon.png" id="button1" border="0">                    </span>                    <span class="menu-control-value">                      <span class="menu-control-title">Product</span>                      <span class="menu-control-text">ERP+</span>                    </span>                  </a></td>
+    <td class="headertitle page-title" width="100%">
+    <ul><li class="company-selector"><span class="text-description">Company</span><span><div class="styled-select"><select onchange="hCOINSMain.selectCompany(this, '20.08017.Y');" class="company" id="companySelector" name="companySelector" style="width: 151px;"><option value="0" title="000 - Country Codes">000 - Country Codes</option><option value="1" title="001 - CONTRACTOR MASTER">001 - CONTRACTOR MASTER</option><option value="3" title="003 - HOUSEBUILDER MASTER">003 - HOUSEBUILDER MASTER</option><option value="5" title="005 - Irish QA">005 - Irish QA</option><option value="6" title="006 - Sarmila's Company">006 - Sarmila's Company</option><option value="9" title="009 - Asset Management QA">009 - Asset Management QA</option><option value="10" title="010 - Contractors QA">010 - Contractors QA</option><option value="11" title="011 - Replication of Kco10 - ZK Plant">011 - Replication of Kco10 - ZK Plant</option><option value="12" title="012 - SureStart UK CATS">012 - SureStart UK CATS</option><option value="14" title="014 - Sygrabb copy config">014 - Sygrabb copy config</option><option value="15" title="015 - IFRS 16: Lease Accounting">015 - IFRS 16: Lease Accounting</option><option value="16" title="016 - Sergey's KCO with 13 GL PEriods">016 - Sergey's KCO with 13 GL PEriods</option><option value="18" title="018 - Maryams Company">018 - Maryams Company</option><option value="19" title="019 - Config partial">019 - Config partial</option><option value="20" selected="" title="020 - Housebuilders QA">020 - Housebuilders QA</option><option value="21" title="021 - UK testing on PR COINS + and OA">021 - UK testing on PR COINS + and OA</option><option value="22" title="022 - UK PDR legislation testing only">022 - UK PDR legislation testing only</option><option value="23" title="023 - UK Payroll Sacrifice">023 - UK Payroll Sacrifice</option><option value="24" title="024 - UK advancing tax year testing only">024 - UK advancing tax year testing only</option><option value="26" title="026 - Copy of KCO 20 as at 05/0319">026 - Copy of KCO 20 as at 05/0319</option><option value="27" title="027 - Financial Costing Functionality">027 - Financial Costing Functionality</option><option value="28" title="028 - For Marketplace testing Only">028 - For Marketplace testing Only</option><option value="29" title="029 - Multi Curr EUR base">029 - Multi Curr EUR base</option><option value="30" title="030 - Multi Curr USD base">030 - Multi Curr USD base</option><option value="31" title="031 - Set Currency query">031 - Set Currency query</option><option value="33" title="033 - Copy of 28 Marketplace testing only">033 - Copy of 28 Marketplace testing only</option><option value="35" title="035 - Pasha Inshaat">035 - Pasha Inshaat</option><option value="36" title="036 - Pasha Support Svs">036 - Pasha Support Svs</option><option value="37" title="037 - PDR 27414 - Copy of Kco 20">037 - PDR 27414 - Copy of Kco 20</option><option value="40" title="040 - Australian QA">040 - Australian QA</option><option value="41" title="041 - Australian QA Co 2">041 - Australian QA Co 2</option><option value="45" title="045 - New Dev Main 27344">045 - New Dev Main 27344</option><option value="46" title="046 - New Dev Main 27344a">046 - New Dev Main 27344a</option><option value="50" title="050 - US OA No longer connected to TI (107c2.cut db n1)">050 - US OA No longer connected to TI (107c2.cut db n1)</option><option value="51" title="051 - US-DO NOT USE">051 - US-DO NOT USE</option><option value="52" title="052 - US-DO NOT USE">052 - US-DO NOT USE</option><option value="54" title="054 - Canadian Payroll">054 - Canadian Payroll</option><option value="55" title="055 - Canadian kco copy from 54">055 - Canadian kco copy from 54</option><option value="57" title="057 - Canadian KCO config only">057 - Canadian KCO config only</option><option value="60" title="060 - Middle East Company">060 - Middle East Company</option><option value="61" title="061 - 11.11 - Middle East SM &amp;amp; VAT Testing ">061 - 11.11 - Middle East SM &amp; VAT Testing </option><option value="62" title="062 - Middle East">062 - Middle East</option><option value="70" title="070 - Mac-Mic">070 - Mac-Mic</option><option value="75" title="075 - CVR OA TESTING">075 - CVR OA TESTING</option><option value="76" title="076 - PDR 27344 Copy of KCO 10">076 - PDR 27344 Copy of KCO 10</option><option value="80" title="080 - US Primary Company">080 - US Primary Company</option><option value="81" title="081 - US-Intercompany Testing - Uses TS Input Groups">081 - US-Intercompany Testing - Uses TS Input Groups</option><option value="82" title="082 - US Company used for Unified Payroll Testing">082 - US Company used for Unified Payroll Testing</option><option value="85" title="085 - US 2 KCO">085 - US 2 KCO</option><option value="86" title="086 - Copy of KCO 80 as at 26/11/19">086 - Copy of KCO 80 as at 26/11/19</option><option value="87" title="087 - new kco">087 - new kco</option><option value="90" title="090 - Training Company">090 - Training Company</option><option value="91" title="091 - VAT Testing Co">091 - VAT Testing Co</option><option value="92" title="092 - Anups Test Kco">092 - Anups Test Kco</option><option value="100" title="100 - US Prime CATS">100 - US Prime CATS</option><option value="101" title="101 - Vinci Construction UK">101 - Vinci Construction UK</option><option value="102" title="102 - sygrabb test kco">102 - sygrabb test kco</option><option value="105" title="105 - Vinci Plant">105 - Vinci Plant</option><option value="106" title="106 - Gemma New Kco DO NOT DELETE">106 - Gemma New Kco DO NOT DELETE</option><option value="107" title="107 - Gemmas ONLY PDR 27344">107 - Gemmas ONLY PDR 27344</option><option value="111" title="111 - Vinci Sister Company Trading ">111 - Vinci Sister Company Trading </option><option value="200" title="200 - Kier Remote login">200 - Kier Remote login</option><option value="300" title="300 - Crowder-Murray QA">300 - Crowder-Murray QA</option><option value="305" title="305 - Pit 1 Revenue testing environment ">305 - Pit 1 Revenue testing environment </option><option value="310" title="310 - Pit 2 Revenue testing environment ">310 - Pit 2 Revenue testing environment </option><option value="315" title="315 - 10.25 - Zara - RCT">315 - 10.25 - Zara - RCT</option><option value="320" title="320 - 10.25 - Dave - RCT">320 - 10.25 - Dave - RCT</option><option value="330" title="330 - IRL PR Legislative Testing Only">330 - IRL PR Legislative Testing Only</option><option value="331" title="331 - EOY17 Irish payroll">331 - EOY17 Irish payroll</option><option value="332" title="332 - Ireland PR testing">332 - Ireland PR testing</option><option value="333" title="333 - Irish Test Illness">333 - Irish Test Illness</option><option value="334" title="334 - Guernsey Payroll">334 - Guernsey Payroll</option><option value="401" title="401 - Vinci IHP JV">401 - Vinci IHP JV</option><option value="402" title="402 - Jersey PR Legislation Testing Only">402 - Jersey PR Legislation Testing Only</option><option value="403" title="403 - UK Service Management">403 - UK Service Management</option><option value="404" title="404 - Plant Sure Start">404 - Plant Sure Start</option><option value="405" title="405 - Plant Best Practice (Support)">405 - Plant Best Practice (Support)</option><option value="406" title="406 - Sure Start Copy PDR27344">406 - Sure Start Copy PDR27344</option><option value="410" title="410 - PDR 22712(1)RTI EYU">410 - PDR 22712(1)RTI EYU</option><option value="420" title="420 - Shaylor Weekly Cost">420 - Shaylor Weekly Cost</option><option value="430" title="430 - Shaylor Mgt Services">430 - Shaylor Mgt Services</option><option value="500" title="500 - Dextrys">500 - Dextrys</option><option value="550" title="550 - CBC Testing ONLY">550 - CBC Testing ONLY</option><option value="600" title="600 - 10 SureStart UK">600 - 10 SureStart UK</option><option value="610" title="610 - ART KCO 10">610 - ART KCO 10</option><option value="620" title="620 - 40 AUS SureStart">620 - 40 AUS SureStart</option><option value="630" title="630 - MENA SureStart">630 - MENA SureStart</option><option value="640" title="640 - US SureStart">640 - US SureStart</option><option value="710" title="710 - ME Payroll P Ackers">710 - ME Payroll P Ackers</option><option value="900" title="900 - ** US CATS USE ONLY **">900 - ** US CATS USE ONLY **</option></select></div></span></li><li class="company-selector"><span class="text-description">Purchase Ledger</span><span><span class="text-title">Invoices<i id="plusversion"></i></span></span></li></ul>
+    <div class="search-wrapper"><div class="header-search"><i class="icn icn-Search" title="Search [CTRL+SHIFT-?]"></i><input type="search" id="headerSearch" name="search" placeholder="Search for anything within COINS..."></div></div>
+    </td>
+    <td id="bannerright"><div class="banner">
+      <div id="reports">
+      <a class="banner-btn" href="woframe.p?kco=20&amp;pvCILevel=2&amp;pvCISibling=80&amp;TopMenu=%2525WHOME&amp;MainArea=%25WSYBCRR" target="reportStatus" id="reportStatus" onclick="return hCOINSMain.clickTile(this);" data-apptype="frame" data-title="Report Status" data-menuitem="%WSYBCRR"><div style="position:relative; display:flex;"><i class="icn icn-Print"></i><div class="backgroundTasks notification-bullet" style="display:none">0</div><div class="unreadReports notification-bullet" style="display:none">0</div></div></a></div>
+      <div id="user-header"><div id="user-name"><div>Tim</div><div class="user-name-description">CARPENTER HELPER</div></div>
+      <div style="position:relative"><div id="user-avatar" class="accountimage"><span class="avatar"><div id="user-image" class="accountimage" style="background-image: url(wourun.p?program=sywraw&amp;filename=1tV0MtMA-f4XurFpSpyuQzI7O6P_XSjtlh_gor56At9dBkgBCS2Nj4MWp-O-ldHTQuMLg24&amp;cache=Y&amp;mod-date=020620&amp;mod-time=43756&amp;hash=KEbP192Vb0ChN4MXtH9lmdypYT7OSTcpT4moLrrmWh2DKWWtGlrxeU6Ai7KtHl8nWgWigKPp_kk_3NemxsL6Ag)"></div></span></div><div class="newTasks notification-bullet" style="display:none">0</div></div><div id="menu_closed"><i class="icn icn-Chevron-Down"></i></div></div>
+      <a href="https://ukazux01.coinscloud.com:4433/env/devstagews/woframe.p?kco=20&amp;pvCILevel=2&amp;pvCISibling=80&amp;TopMenu=%2525WHOME&amp;program=wou005&amp;MainArea=%25WPL5010BAIN&amp;selectRepCur=1&amp;info=cosval.PLOverdue&amp;docTable=ap_invoice&amp;pvFrame=W,2052,1088" id="desktopLogo">
+      <div id="logo"><img src="/coins/devstage/20230228063043/skin/v1105/images/logo_coins.svg"></div>
+      </a>
+      </div></td>
+    </tr></tbody></table>
+  
+  </td></tr>
+    </tbody></table></td></tr></table>
+  
+  
+  <div class="create-desktop">
+    <div class="cd__head">
+      <div class="cd__head-left">
+        <div class="cd__desktop-name">
+          <p>Desktop name</p>
+          <input class="cd-input" type="text" placeholder="Name">
+        </div>
+        <div class="cd__desktop-bg">
+          <p>Background</p>
+          <select name="desktop-bg" id="desktop-bg" class="cd-select">
+            <option value="0">None</option>
+            <option value="1">Red</option>
+            <option value="2">Green</option>
+          </select>
+        </div>
+      </div>
+      <div class="cd__head-right">
+        <p><i>Editing Desktops</i></p>
+        <button type="button" class="cd-btn">Discard</button>
+        <button type="button" class="cd-btn cd-btn--dark">Save</button>
+      </div>
+    </div>
+    <div class="cd__tabs">
+      <div class="cd-tab cd-tab--active">
+        <span class="cd-tab-drag"><i class="icn icn-Menu-Burger-Filled"></i></span>
+        <span class="cd-tab-name" contenteditable="true">Tab 1</span>
+        <button class="cd-tab-close" type="button"><i class="icn icn-Close"></i></button>
+      </div>
+      <div class="cd-tab">
+        <span class="cd-tab-drag"><i class="icn icn-Menu-Burger-Filled"></i></span>
+        <span class="cd-tab-name" contenteditable="true">Tab 2</span>
+        <button class="cd-tab-close" type="button"><i class="icn icn-Close"></i></button>
+      </div>
+      <button type="button" class="cd-tab cd-tab--add">
+        <span>+ Add Tab</span>
+      </button>
+    </div>
+    <div class="cd__body">
+      <div class="cd-section">
+        <div class="cd-section-head">
+          <span class="cd-section-drag"><i class="icn icn-Menu-Burger-Filled"></i></span>
+          <span class="cd-section-name" contenteditable="true">Section 1</span>
+          <button class="cd-section-close" type="button"><i class="icn icn-Close"></i></button>
+        </div>
+        <div class="cd-section-body">
+          Section body
+        </div>
+      </div>
+      <div class="cd-section">
+        <div class="cd-section-head">
+          <span class="cd-section-drag"><i class="icn icn-Menu-Burger-Filled"></i></span>
+          <span class="cd-section-name" contenteditable="true">Section 2</span>
+          <button class="cd-section-close" type="button"><i class="icn icn-Close"></i></button>
+        </div>
+        <div class="cd-section-body">
+          Section body
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+
+
+
+
+
+</html>
